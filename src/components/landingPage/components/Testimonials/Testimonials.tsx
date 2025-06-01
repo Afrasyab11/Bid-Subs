@@ -5,8 +5,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
-import { testimonials } from "../../../../constants";
-import MainHeading from "../../../../common/MainHeading";
+import { testimonials } from "@/constants";
+import MainHeading from "@/common/MainHeading";
 
 const Testimonials: React.FC = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-10">
       {/* Header with Navigation */}
       <div className="flex justify-between items-start mb-12">
         <div>

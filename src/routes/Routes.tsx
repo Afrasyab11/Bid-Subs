@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Landing from "../pages/Landing";
-
-const Routing = () => {
+import { Landing } from "@/components/landingPage/LandingComp";
+export const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
@@ -9,4 +8,3 @@ const Routing = () => {
   );
 };
 
-export default Routing;

@@ -6,7 +6,7 @@ interface SquareButtonProps {
   path: string;
 }
 
-const SquareButton: React.FC<SquareButtonProps> = ({ text, path }) => {
+export const Button: React.FC<SquareButtonProps> = ({ text, path }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(path);
@@ -21,4 +21,3 @@ const SquareButton: React.FC<SquareButtonProps> = ({ text, path }) => {
   );
 };
 
-export default SquareButton;

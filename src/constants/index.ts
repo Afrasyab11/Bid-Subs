@@ -33,7 +33,7 @@ export const faqData: FAQItem[] = [
   },
 ];
 
-export const plans: PricingPlan[] = [
+export const Plans: PricingPlan[] = [
   {
     id: "50k",
     title: "$50K Trading Challenge",

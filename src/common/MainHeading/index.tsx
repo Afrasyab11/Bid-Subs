@@ -11,7 +11,7 @@ const MainHeading: React.FC<HeadingProps> = ({ heading, subheading }) => {
       <h1 className="font-normal text-[30px] md:text-[36px] lg:text-[42px]">
         {heading}
       </h1>
-      <p className="text-[20px]">{subheading}</p>
+      <p className="text-[20px] sm:text-sm md:text-[20px]">{subheading}</p>
     </div>
   );
 };

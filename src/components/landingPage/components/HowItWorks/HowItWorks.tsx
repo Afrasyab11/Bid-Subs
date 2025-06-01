@@ -1,5 +1,5 @@
-import { LandingImages } from "../../../../assets/images/Index";
-import MainHeading from "../../../../common/MainHeading";
+import { LandingImages } from "@/assets/images/Index";
+import MainHeading from "@/common/MainHeading";
 
 const HowItWorks = () => {
   return (

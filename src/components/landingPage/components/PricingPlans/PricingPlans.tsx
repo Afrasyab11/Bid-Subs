@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FiCheck } from "react-icons/fi";
-import { plans } from "../../../../constants";
-import { LandingImages } from "../../../../assets/images/Index";
-import MainHeading from "../../../../common/MainHeading";
+import { LandingImages } from "@/assets/images/Index";
+import MainHeading from "@/common/MainHeading";
+import { Plans } from "@/constants";
 
 const PricingPlans: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState("Starter Plus");
@@ -38,7 +38,7 @@ const PricingPlans: React.FC = () => {
 
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan) => (
+        {Plans?.map((plan) => (
           <div
             key={plan.id}
             className="bg-[#0F1C32] rounded-xl relative p-8 border border-slate-600"
