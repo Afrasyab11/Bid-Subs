@@ -1,0 +1,27 @@
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --color-primary: #1350e5;
+  --color-secondary: #0e1b30;
+  --color-dark: #0b1423;
+  --color-lightgray: #fdfff7e5;
+}
+
+body {
+  margin: 0;
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto;
+}
+
+.testimonials-swiper .swiper-wrapper {
+  align-items: stretch;
+}
