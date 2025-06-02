@@ -1,5 +1,4 @@
 import MainHeading from '@/common/MainHeading'
-import React from 'react'
 
 const SecoundBox = () => {
   return (
