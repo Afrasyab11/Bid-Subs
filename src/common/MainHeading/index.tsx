@@ -1,9 +1,9 @@
 import React from "react";
 
 interface HeadingProps {
-  heading: string;
-  subheading: string;
-  classname: string;
+  heading?: string;
+  subheading?: string;
+  classname?: string;
 }
 
 const MainHeading: React.FC<HeadingProps> = ({ heading, subheading ,classname }) => {

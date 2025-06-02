@@ -1,4 +1,3 @@
-import React from 'react';
 import MainHeading from '@/common/MainHeading';
 import { Button } from '@/common/Button';
 
