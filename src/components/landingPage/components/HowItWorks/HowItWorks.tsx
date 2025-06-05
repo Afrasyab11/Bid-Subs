@@ -1,4 +1,4 @@
-import { LandingImages } from "@/assets/images/Index";
+import { Icons } from "@/assets/Index";
 import MainHeading from "@/common/MainHeading";
 
 const HowItWorks = () => {
@@ -10,7 +10,7 @@ const HowItWorks = () => {
       />
       <div className="py-10 flex items-center justify-center">
         <img
-          src={LandingImages?.HowItWorks}
+          src={Icons?.HowItWorks}
           alt="how it works"
           className="h-[600px]"
         />

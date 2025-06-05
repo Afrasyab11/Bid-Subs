@@ -1,26 +1,27 @@
-import { LandingImages } from "@/assets/images/Index";
+// import { Icons } from "@/assets/Index";
+import { Icons } from "@/assets/Index";
 import MainHeading from "@/common/MainHeading";
 
 const features = [
   {
-    image: LandingImages.Speed,
+    image: Icons.Speed,
     title: "Speed",
     description: "Save up to 50% of estimate time so you can bid on more jobs.",
   },
   {
-    image: LandingImages.Accuracy,
+    image: Icons.Accuracy,
     title: "Accuracy",
     description:
       "AI analysis slashes manual errors. Helping avoid the 5–10% extra costs from overages.",
   },
   {
-    image: LandingImages.WinRate,
+    image: Icons.WinRate,
     title: "Win Rates",
     description:
       "Fast turnaround, submit more bids, industry tools have cut takeoff time by 90%.",
   },
   {
-    image: LandingImages.Insights,
+    image: Icons.Insights,
     title: "Insights",
     description:
       "Built-in analytics and comparisons highlight the most profitable jobs.",

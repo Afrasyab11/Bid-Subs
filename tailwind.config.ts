@@ -1,21 +1,47 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+const config: Config = {
+  darkMode: "class",
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./src/common/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/routes/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        gray1: "#bbbbbb",
+      screens:{
+        sm:"320px",
       },
-       screens: {
-        sm: "320px",
+      colors: {
+        primary: "#0B1423",
+        blue: "#1350E5",
+        semi_blue: "#E8ECF4",
+        light_dark: "#1C1E1C80",
+        gray: "#676D75",
+        "blue-light": "rgba(19, 80, 229, 0.1)",
+        dark: "#0B1423",
+        "semi-dark": "#0F1C32",
+        grayDark: "#666666",
+        stroke: "#E8ECF4",
+        semi_light: "#F7F8F9",
+        light: "rgba(19, 80, 229, 0.1)",
+        "semi-gray": "#25252566",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".border-gradient": {
+          border: "1px solid",
+          borderImageSource:
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(102, 102, 102, 0.05))",
+          borderImageSlice: "1",
+        },
+      });
+    }),
+  ],
 };
+export default config;

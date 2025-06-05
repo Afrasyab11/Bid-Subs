@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiCheck } from "react-icons/fi";
-import { LandingImages } from "@/assets/images/Index";
+import { Icons } from "@/assets/Index";
 import MainHeading from "@/common/MainHeading";
 import { Plans } from "@/constants";
 
@@ -44,7 +44,7 @@ const PricingPlans: React.FC = () => {
             className="bg-[#0F1C32] rounded-xl relative p-8 border border-slate-600"
           >
             <img
-              src={LandingImages?.Ellipse}
+              src={Icons?.Ellipse}
               alt="Card Top"
               className="absolute top-0"
             />

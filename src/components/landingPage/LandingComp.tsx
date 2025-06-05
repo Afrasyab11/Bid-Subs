@@ -6,15 +6,16 @@ import Hero from "./components/Hero/Hero";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import PricingPlans from "./components/PricingPlans/PricingPlans";
 import Testimonials from "./components/Testimonials/Testimonials";
-import ThirdBox from "./components/ThirdBox/ThirdBox";
+import WhyManualEstimating from "./components/WhyManualEstimating/WhyManualEstimating";
 export const Landing = () => {
+  
   return (
     <div className="bg-dark ">
       <Header/>
         <Hero/>
       <div className="w-[95%] md:w-[90%] mx-auto flex flex-col items-center justify-center gap-[80px]">
         <SecoundBox/>
-        <ThirdBox/>
+        <WhyManualEstimating/>
         <Features />
         <HowItWorks />
         <FAQs />
