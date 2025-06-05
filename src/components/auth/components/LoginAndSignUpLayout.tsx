@@ -8,10 +8,7 @@ import { useState } from "react";
 import { Layout } from "../layout";
 export const LoginAndSignUp = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [authtitle, setAuthTitle] = useState({
-    title: "Sign in to your account",
-    subTitle: "Welcome back! Please enter your details",
-  });
+
 
   const tabItems = [
     {
@@ -47,10 +44,10 @@ export const LoginAndSignUp = () => {
         </div>
         <div className="w-full flex flex-col items-center justify-center gap-y-2 mt-4 mb-7 ">
           <p className="text-white text-xl font-semibold">
-            {activeTab === 0 ? authtitle?.title : "Create your account"}
+            {activeTab === 0 ? "Sign in to your account" : "Create your account"}
           </p>
           <p className="text-white text-sm">
-            {activeTab === 0 ? authtitle?.title : "Please enter your details"}
+            {activeTab === 0 ? "Welcome back! Please enter your details" : "Please enter your details"}
           </p>
         </div>
         <div className="relative">

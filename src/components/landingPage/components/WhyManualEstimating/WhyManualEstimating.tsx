@@ -1,5 +1,5 @@
 import MainHeading from "@/common/MainHeading";
-import { Button } from "@/common/Button";
+import { Button } from "@/common/Button/index";
 import { Icons } from "@/assets/Index";
 const ThirdBoxContent = {
   heading: "Why Manual Estimating Holds You Back",

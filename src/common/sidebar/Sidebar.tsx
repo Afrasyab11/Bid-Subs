@@ -6,7 +6,6 @@ import { PiNotificationFill } from "react-icons/pi";
 import Image from "../image/Image";
 import { Icons } from "@/assets/Index";
 import { X } from "lucide-react";
-import Button from "../Button";
 interface SidebarProps {
   toggleSidebar: () => void;
   isSidebarOpen?: any;

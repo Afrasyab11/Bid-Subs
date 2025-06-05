@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Icons } from "@/assets/Index";
 import { Checkbox } from "@/common/Input/Input";
 import Button from "@/common/Button";
-import { Link } from "react-router-dom";
 export const Signup = () => {
   const [payload, setPayload] = useState({
     email: "",
@@ -31,7 +30,7 @@ export const Signup = () => {
           placeholder="Password"
           type="password"
           icon={Icons?.lock}
-          onChange={(e) => console.log("password", e)}
+          onChange={(e) => setPayload({...payload,password:e.target.value})}
           showPasswordToggle={true}
         />
         <div className="flex justify-between items-center">
