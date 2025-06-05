@@ -268,10 +268,7 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({ isOpen, 
           {currentStep < 3 ? (
             <button
               onClick={handleNext}
-            //   disabled={
-            //     (currentStep === 1 && !canProceedFromStep1) ||
-            //     (currentStep === 2 && !canProceedFromStep2)
-            //   }
+        
               className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 disabled:bg-slate-600 disabled:cursor-not-allowed transition-colors"
             >
               Next
