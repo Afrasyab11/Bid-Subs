@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import MainHeading from "@/common/MainHeading";
-import { Button } from "@/common/Button";
+import { Button } from "@/common/Button/index";
 import { faqData } from "@/constants";
 import { motion, AnimatePresence } from "framer-motion";
 

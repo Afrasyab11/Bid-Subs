@@ -1,14 +1,14 @@
 import { Input } from "@/common/Input/Input";
-import { useState } from "react";
+// import { useState } from "react";
 import { Icons } from "@/assets/Index";
 import { Link } from "react-router-dom";
 import Button from "@/common/Button";
 import { Layout } from "../layout";
 import { ROUTES_ENUM } from "@/constants/routes.constant";
 export const OTP = () => {
-  const [payload, setPayload] = useState({
-    otp: "",
-  });
+//   const [payload, setPayload] = useState({
+//     otp: "",
+//   });
   return (
     <Layout>
       <div className="w-full flex flex-col justify-center items-center h-full gap-y-3 min-h-[75vh] sm:px-2 md:px-10">
@@ -20,7 +20,7 @@ export const OTP = () => {
             </p>
           </div>
           <Input
-            value={payload?.otp}
+            // value={payload?.otp}
             placeholder="OTP"
             icon={Icons?.email}
             onChange={(e) => console.log("password", e)}

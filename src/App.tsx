@@ -15,10 +15,6 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route path={ROUTES_ENUM.ROOT} element={<Home />} />
-          <Route path={ROUTES_ENUM.LOGIN} element={<AuthLayout />}>
-            <Route index element={<Auth />} />
-          </Route> */}
           <Route path={ROUTES_ENUM.ROOT} element={<Landing />} />
           <Route element={<AuthLayout />}>
             <Route path={ROUTES_ENUM.LOGIN} element={<LoginAndSignUp />} />

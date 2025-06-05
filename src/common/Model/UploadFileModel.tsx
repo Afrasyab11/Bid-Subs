@@ -111,8 +111,7 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({ isOpen, 
     onClose();
   };
 
-  const canProceedFromStep1 = projectTitle.trim() !== '' && uploadedFiles.length > 0;
-  const canProceedFromStep2 = selectedTrade !== '';
+  
   const canSubmit = selectedBids.length > 0;
 
   if (!isOpen) return null;
