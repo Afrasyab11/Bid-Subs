@@ -26,7 +26,7 @@ const PricingPlans: React.FC = () => {
               onClick={() => setSelectedTab(tab)}
               className={`px-6 py-2 rounded-md text-sm font-medium transition-colors hover:cursor-pointer ${
                 selectedTab === tab
-                  ? "bg-primary text-white"
+                  ? "bg-dark text-white"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -64,7 +64,7 @@ const PricingPlans: React.FC = () => {
             <button
               className={`w-full py-3 px-6 rounded-lg font-medium mb-8 transition-colors hover:cursor-pointer ${
                 plan.isPopular
-                  ? "bg-primary hover:bg-primary/80 text-white"
+                  ? "bg-dark hover:bg-dark/80 text-white"
                   : "bg-white hover:bg-gray-100 text-slate-900"
               }`}
             >

@@ -15,7 +15,6 @@ const config: Config = {
         sm:"320px",
       },
       colors: {
-        primary: "#0B1423",
         blue: "#1350E5",
         semi_blue: "#E8ECF4",
         light_dark: "#1C1E1C",

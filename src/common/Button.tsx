@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   label = "",
   title = "",
   type = "button",
-  className = "bg-primary text-white py-2 px-5 rounded-xl",
+  className = "bg-dark text-white py-2 px-5 rounded-xl",
   onClick,
   disabled = false,
   isLoading = false,

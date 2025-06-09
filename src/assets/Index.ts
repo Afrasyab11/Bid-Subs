@@ -25,8 +25,10 @@ import email from "./LandingImages/SVGs/email.svg";
 import lock from "./LandingImages/SVGs/lock.svg";
 import check from "./LandingImages/SVGs/check.svg";
 import tableEllips from "./LandingImages/SVGs/tableEllips.svg"
+import layoutBg from "./LandingImages/SVGs/layoutBg.svg"
 export const Icons = {
   tableEllips,
+  layoutBg,
   profile,
   email,
   lock,

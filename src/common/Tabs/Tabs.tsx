@@ -18,7 +18,7 @@ export default function SmoothTabs({
         <div className="relative shadow-tab-shadow bg-semi-dark w-full  max-w-lg rounded-lg p-2 flex items-center mb-8">
           {/* Sliding Background */}
           <div
-            className="absolute h-[calc(100%-8px)] top-1 bg-primary rounded-lg transition-all duration-300 ease-out"
+            className="absolute h-[calc(100%-8px)] top-1 bg-dark rounded-lg transition-all duration-300 ease-out"
             style={{
               width: `calc(${100 / tabs.length}% - 8px)`,
               left: `calc(${activeTab * (100 / tabs.length)}% + 4px)`,

@@ -15,7 +15,7 @@ export const Button: React.FC<SquareButtonProps> = ({ text, path , classname }) 
   return (
     <button
       onClick={handleClick}
-      className={`${classname} px-6 py-2 bg-primary hover:bg-primary/80 text-white max-sm:text-xs hover:cursor-pointer`}
+      className={`${classname} px-6 py-2 bg-dark hover:bg-dark/80 text-white max-sm:text-xs hover:cursor-pointer`}
     >
       {text}
     </button>
