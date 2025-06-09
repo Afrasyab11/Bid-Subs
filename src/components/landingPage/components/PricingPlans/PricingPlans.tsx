@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FiCheck } from "react-icons/fi";
 import { Icons } from "@/assets/Index";
 import MainHeading from "@/common/MainHeading";
 import { Plans } from "@/constants";
