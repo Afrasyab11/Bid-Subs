@@ -10,7 +10,7 @@ const HowItWorks = () => {
       />
       <div className="py-10 flex items-center justify-center">
         <img
-          src={Icons?.HowItWorks}
+          src={Icons?.howItworkBg}
           alt="how it works"
           className="h-[600px]"
         />

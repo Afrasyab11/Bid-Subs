@@ -5,9 +5,10 @@ import WinRate from "./LandingImages/SVGs/winrate.svg";
 import HowItWorks from "./LandingImages/SVGs/howItWorks.svg";
 import Ellipse from "./LandingImages/PNGs/Ellipse.png";
 import landingCard1 from "./LandingImages/SVGs/landingCard1.svg";
-import landingCard2 from "./LandingImages/SVGs/landingCard2.svg";
+import landingCard2 from "./LandingImages/PNGs/landingCard2.png";
+import landingCard4 from "./LandingImages/PNGs/landingCard4.png";
 import landingCard3 from "./LandingImages/SVGs/landingCard3.svg";
-import landingCard4 from "./LandingImages/SVGs/landingCard4.svg";
+// import landingCard4 from "./LandingImages/SVGs/landingCard4.svg";
 import breifcase from "./LandingImages/SVGs/briefcase.svg";
 import dash_card_icon from "./LandingImages/SVGs/dash_card_icon.svg";
 import dash_upload_btn_icon from "./LandingImages/SVGs/dash_upload_btn_icon.svg";
@@ -26,8 +27,16 @@ import lock from "./LandingImages/SVGs/lock.svg";
 import check from "./LandingImages/SVGs/check.svg";
 import tableEllips from "./LandingImages/SVGs/tableEllips.svg"
 import layoutBg from "./LandingImages/SVGs/layoutBg.svg"
+import howItworkBg from "./LandingImages/SVGs/howItworkBg.svg"
+import howIt from "./LandingImages/PNGs/howIt.png"
+import checkPlan from "./LandingImages/SVGs/checkPlan.svg"
+import testoEllips from "./LandingImages/SVGs/TestomonialEllipse.svg"
 export const Icons = {
   tableEllips,
+  testoEllips,
+  checkPlan,
+  howItworkBg,
+  howIt,
   layoutBg,
   profile,
   email,

@@ -39,7 +39,7 @@ const Features = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center text-center">
-            <img src={feature.image} alt={feature.title} className=" mb-4" />
+            <img src={feature.image} alt={feature.title} className=" " />
             <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
             <p className="text-lightgray text-sm">{feature.description}</p>
           </div>

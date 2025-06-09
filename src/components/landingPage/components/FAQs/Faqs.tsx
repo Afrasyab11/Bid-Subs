@@ -22,7 +22,7 @@ const FAQs: React.FC = () => {
             Got questions? We've got answers
           </p>
         </div>
-        <Button text="Try Now" path="/" classname="rounded-lg" />
+        <Button text="Try Now" path="/" classname="rounded-lg !bg-blue" />
       </div>
 
       {/* FAQ Items */}

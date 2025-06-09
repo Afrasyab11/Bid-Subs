@@ -11,6 +11,7 @@ const ThirdBoxContent = {
       bg: "#0F1C32",
       class: "justify-center",
       title: "Too Much Manual Work",
+      bgPositionClass: "-top-28 ",
       description:
         "Endless hours spent on takeoffs, spreadsheets, and calculations kill productivity.",
     },
@@ -19,6 +20,7 @@ const ThirdBoxContent = {
       bg: "#0F1C32",
       title: "Error-Prone Estimates",
       class: "justify-start",
+      bgPositionClass: "",
       description:
         "Manual input leads to costly mistakes—5–10% overruns are common.",
     },
@@ -26,7 +28,8 @@ const ThirdBoxContent = {
       image: Icons?.landingCard3,
       bg: "#0F1C32",
       title: "Thin Margins, Big Risks",
-      class: "justify-center",
+      class: "justify-center",bgPositionClass: "w-full ",
+
       description:
         "With average profits around 5%, even small miscalculations can wipe out earnings.",
     },
@@ -34,9 +37,11 @@ const ThirdBoxContent = {
       image: Icons?.landingCard4,
       bg: "#0F1C32",
       title: "Missed Opportunities",
-     class: "justify-start",
+      class: "justify-start",
       description:
         "Slow bids mean fewer chances to win projects and grow revenue.",
+      className: "absolute bottom-0 -z-0",
+      bgPositionClass: "-bottom-28",
     },
   ],
 };
@@ -58,10 +63,9 @@ const WhyManualEstimating = () => {
             className="text-white relative shadow-md hover:shadow-lg rounded-3xl min-h-[300px] overflow-hidden group transition-all duration-300"
             style={{ backgroundColor: item?.bg }}
           >
-            {/* Background Image */}
-            <div className="absolute inset-0 -z-0">
+            <div className={`absolute inset-0 -z-0 ${item?.bgPositionClass}`}>
               <div
-                className="h-full w-full rounded-3xl bg-cover bg-center bg-no-repeat  duration-300"
+                className={`h-full w-full rounded-3xl bg-center  bg-no-repeat  duration-300  `}
                 style={{
                   backgroundImage: `url(${item?.image})`,
                 }}

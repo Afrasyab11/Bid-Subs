@@ -7,6 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { testimonials } from "@/constants";
 import MainHeading from "@/common/MainHeading";
+import Image from "@/common/image/Image";
+import { Icons } from "@/assets/Index";
 
 const Testimonials: React.FC = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -17,7 +19,7 @@ const Testimonials: React.FC = () => {
       <span
         key={index}
         className={`text-sm ${
-          index < rating ? "text-blue-400" : "text-slate-600"
+          index < rating ? "text-blue" : "text-slate-600"
         }`}
       >
         ★
@@ -95,8 +97,9 @@ const Testimonials: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-xl p-6 border border-slate-700 h-full"
+              className="rounded-xl p-6 relative border border-slate-700 h-full bg-light_dark/50"
             >
+              <Image src={Icons?.testoEllips} alt="ellips" className="absolute right-0 top-0 h-full w-full" />
               {/* User Info */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
@@ -120,7 +123,7 @@ const Testimonials: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-300 text-md leading-relaxed">
                 {testimonial.text}
               </p>
             </motion.div>
