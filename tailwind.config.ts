@@ -18,7 +18,7 @@ const config: Config = {
         primary: "#0B1423",
         blue: "#1350E5",
         semi_blue: "#E8ECF4",
-        light_dark: "#1C1E1C80",
+        light_dark: "#1C1E1C",
         gray: "#676D75",
         "blue-light": "rgba(19, 80, 229, 0.1)",
         dark: "#0B1423",
@@ -39,6 +39,10 @@ const config: Config = {
           borderImageSource:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(102, 102, 102, 0.05))",
           borderImageSlice: "1",
+        },
+         '.table-glass-border': {
+          borderImageSlice: '1',
+          backdropFilter: 'blur(12px)', // Glassmorphism blur
         },
       });
     }),

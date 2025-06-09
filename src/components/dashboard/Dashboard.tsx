@@ -104,8 +104,13 @@ const Dashboard: React.FC = () => {
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className={`p-6 rounded-xl bg-semi_blue dark:bg-light_dark border-gradient  overflow-hidden`}
+              className={`relative p-6 rounded-xl bg-semi_blue dark:bg-light_dark/50 overflow-hidden`}
             >
+              <Image
+                src={Icons?.tableEllips}
+                alt="Blur Background"
+                className="absolute right-0 bottom-0 h-[288px] w-[288px] opacity-80 pointer-events-none select-none"
+              />
               <div className="flex items-start gap-x-3 mb-4">
                 <Image
                   src={Icons?.dash_card_icon}
@@ -148,8 +153,13 @@ const Dashboard: React.FC = () => {
               Proposals List
             </h2>
           </div>
-          <div className="overflow-x-auto bg-semi_light dark:bg-light_dark rounded-2xl">
-            <table className="w-full text-dark dark:text-white">
+          <div className="overflow-x-auto bg-semi_light dark:bg-light_dark/50 rounded-2xl relative">
+            <Image
+              src={Icons?.tableEllips}
+              alt="Blur Background"
+              className="absolute right-0 bottom-0 h-[690px] w-[690px] opacity-80 pointer-events-none select-none"
+            />
+            <table className="w-full text-dark dark:text-white relative ">
               <thead>
                 <tr>
                   <th className="text-left p-4 text-sm font-medium ">
@@ -187,7 +197,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Notification Banner */}
-        <div className="mt-6 bg-semi_blue dark:bg-light_dark   !text-black dark:!text-white  rounded-lg p-4 flex items-center gap-3">
+        <div className="mt-6 bg-semi_blue dark:bg-light_dark/50   !text-black dark:!text-white  rounded-lg p-4 flex items-center gap-3">
           <Edit3 size={20} className="text-blue" />
           <p className="text-sm ">
             You've used the same drywall template 6 times — want to save it as a
