@@ -25,8 +25,13 @@ const config: Config = {
         grayDark: "#666666",
         stroke: "#E8ECF4",
         semi_light: "#F7F8F9",
+        navy_blue: "#0E1B30",
+        navy_light: "#141D2F",
         light: "rgba(19, 80, 229, 0.1)",
         "semi-gray": "#25252566",
+      },
+        backgroundImage: {
+        'join-community-bg-gradient': 'linear-gradient(270deg, #0F1C32 0%, #0C182B 100%)',
       },
     },
   },

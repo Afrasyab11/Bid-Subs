@@ -96,7 +96,7 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
             data-form-type="other"
             className={`
   flex-1 px-4 py-3
-  !bg-semi-dark
+  bg-semi-dark
   text-white placeholder-slate-400
   border-none outline-none
   text-base
@@ -116,7 +116,7 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
               className="flex items-center justify-center px-4 text-blue hover:text-blue transition-colors"
               tabIndex={-1}
             >
-              {showPassword ? <EyeOff size={20}/> : <Eye size={20} />}
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
           )}
         </div>

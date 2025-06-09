@@ -19,7 +19,7 @@ const PricingPlans: React.FC = () => {
 
       {/* Tab Navigation */}
       <div className="flex justify-center my-10">
-        <div className="bg-slate-800 p-1 rounded-lg flex">
+        <div className="bg-slate-800 p-1 rounded-lg flex sm:overflow-x-scroll md:overflow-auto">
           {tabs.map((tab) => (
             <button
               key={tab}

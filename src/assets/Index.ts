@@ -25,13 +25,39 @@ import profile from "./LandingImages/SVGs/profile.svg";
 import email from "./LandingImages/SVGs/email.svg";
 import lock from "./LandingImages/SVGs/lock.svg";
 import check from "./LandingImages/SVGs/check.svg";
-import tableEllips from "./LandingImages/SVGs/tableEllips.svg"
-import layoutBg from "./LandingImages/SVGs/layoutBg.svg"
-import howItworkBg from "./LandingImages/SVGs/howItworkBg.svg"
-import howIt from "./LandingImages/PNGs/howIt.png"
-import checkPlan from "./LandingImages/SVGs/checkPlan.svg"
-import testoEllips from "./LandingImages/SVGs/TestomonialEllipse.svg"
+import tableEllips from "./LandingImages/SVGs/tableEllips.svg";
+import layoutBg from "./LandingImages/SVGs/layoutBg.svg";
+import howItworkBg from "./LandingImages/SVGs/howItworkBg.svg";
+import howIt from "./LandingImages/PNGs/howIt.png";
+import checkPlan from "./LandingImages/SVGs/checkPlan.svg";
+import testoEllips from "./LandingImages/SVGs/TestomonialEllipse.svg";
+import AiDriven from "./LandingImages/SVGs/AiDriven.svg";
+import AiDrivenArrow from "./LandingImages/SVGs/AiDrevinArrow.svg";
+import tryNow from "./LandingImages/SVGs/tryNowBtnIcon.svg";
+import facebook from "./LandingImages/SVGs/facebook.svg";
+import twiter from "./LandingImages/SVGs/twiter.svg";
+import insta from "./LandingImages/SVGs/insta.svg";
+import youtube from "./LandingImages/SVGs/youtube.svg";
+import tiktok from "./LandingImages/SVGs/tiktok.svg";
+import phone from "./LandingImages/SVGs/phone.svg";
+import emailWhite from "./LandingImages/SVGs/EmailWhite.svg";
+import joincommunity from "./LandingImages/SVGs/joinCommunity.svg"
+import joinEllips from "./LandingImages/SVGs/joinEllipse.svg"
+import joinOverly from "./LandingImages/PNGs/joinOverly.png"
 export const Icons = {
+  joincommunity,
+  joinOverly,
+  joinEllips,
+  phone,
+  emailWhite,
+  facebook,
+  twiter,
+  insta,
+  youtube,
+  tiktok,
+  AiDriven,
+  tryNow,
+  AiDrivenArrow,
   tableEllips,
   testoEllips,
   checkPlan,

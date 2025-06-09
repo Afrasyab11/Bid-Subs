@@ -1,0 +1,57 @@
+import Button from "@/common/Button";
+import { Input } from "@/common/Input/Input";
+import { useState } from "react";
+import Image from "@/common/image/Image";
+import { Icons } from "@/assets/Index";
+export const JoinOurCommunity = () => {
+  const [email, setEmail] = useState<string>("");
+
+  const handleEmailSubmit = () => {
+    console.log("Email submitted:", email);
+    // Handle email submission logic here
+    setEmail("");
+  };
+
+  return (
+    <div className="bg-join-community-bg-gradient w-full py-20 sm:px-0 md:px-16 rounded-[30px] relative">
+      <Image
+        src={Icons?.joinEllips}
+        alt="join Ellips of Bids Subs"
+        className="absolute top-0 left-1/2 -translate-x-1/2 h-auto w-auto "
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+        <div className="flex flex-col justify-center">
+          <p className="text-4xl text-white">Join our Community</p>
+          <p className="text-md text-white mt-4">
+            Get instant access to weekly newsletter.
+          </p>
+          <div className="flex flex-wrap items-center gap-y-2 gap-x-1 mt-10">
+            <Input
+              onChange={handleEmailSubmit}
+              placeholder="Enter your email"
+              inputClassName="!bg-dark !max-w-[360px]"
+              containerClassName="!max-w-[360px]"
+            />
+
+            <Button
+              label="Notify me"
+              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white"
+            />
+          </div>
+        </div>
+        <div className="relative flex justify-end">
+          <Image
+            src={Icons?.joincommunity}
+            alt="join community of Bids Subs"
+            className="h-full max-h-[289px] w-[305px]"
+          />
+          {/* <Image
+            src={Icons?.joinOverly}
+            alt="join community Overlay of Bids Subs"
+            className="absolute top-0 right-0 max-h-[289px] w-[305px]"
+          /> */}
+        </div>
+      </div>
+    </div>
+  );
+};

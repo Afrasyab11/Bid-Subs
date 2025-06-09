@@ -9,7 +9,7 @@ const ThirdBoxContent = {
     {
       image: Icons?.landingCard1,
       bg: "#0F1C32",
-      class: "justify-center",
+      class: "justify-end",
       title: "Too Much Manual Work",
       bgPositionClass: "-top-28 ",
       description:
