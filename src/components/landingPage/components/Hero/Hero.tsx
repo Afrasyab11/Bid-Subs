@@ -25,11 +25,11 @@ const Hero = () => {
           classname="text-center text-6xl "
           heading={Herocontent.heading}
         />
-        <p className="text-white my-6 text-xl max-sm:text-base ">
+        <p className="text-white my-6 text-xl sm:text-[15px] md:text-base sm:text-justify md:text-center">
           {Herocontent.paragraph}
         </p>
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4 sm:flex-col md:flex-row">
           <Link
             to={ROUTES_ENUM.LOGIN}
             className="rounded-4xl bg-blue rounded-full py-3 text-white px-8"

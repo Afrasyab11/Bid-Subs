@@ -1,4 +1,5 @@
 import { Icons } from "@/assets/Index";
+import Image from "@/common/image/Image";
 import MainHeading from "@/common/MainHeading";
 
 const HowItWorks = () => {
@@ -9,10 +10,10 @@ const HowItWorks = () => {
         subheading="Everything you need to win more jobs"
       />
       <div className="py-10 flex items-center justify-center">
-        <img
+        <Image
           src={Icons?.howItworkBg}
           alt="how it works"
-          className="h-[600px]"
+          // className="h-[600px]"
         />
       </div>
     </div>

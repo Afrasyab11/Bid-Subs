@@ -24,32 +24,40 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-16 bg-navy_blue sm:px-2 md:px-16 rounded-tl-[60px] rounded-tr-[60px]">
-      <div className="grid grid-cols-12 md:grid md:grid-cols-12 gap-y-4 w-full">
-        <div className="sm:col-span-12 md:col-span-8">
+    <div className="w-full pt-10 md:pt-16 md:pb-0 lg:py-16 bg-navy_blue sm:px-2 md:px-4 lg:px-16 rounded-tl-[60px] rounded-tr-[60px]">
+      <div className="grid grid-cols-12 md:grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-y-4 w-full">
+        <div className="sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-8">
           <span className="text-3xl text-white font-semibold">LOGO HERE</span>
           <p className="text-md text-white mt-4 w-full max-w-md">
             <strong>BidSubs</strong> uses AI to turn blueprints into accurate
             bids—fast, simple, and built for subcontractors.
           </p>
         </div>
-        <div className="sm:col-span-12 md:col-span-4 flex items-center sm:flex-wrap md:flex-nowrap mx-auto">
-          {social?.map((item: any) => (
-            <Image
-              src={item?.icon}
-              alt="Bids subs social icons"
-              className="h-24 w-24"
-            />
-          ))}
+        <div className="sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-4 hidden lg:block">
+          <div className="flex items-center sm:flex-wrap md:flex-nowrap  ">
+            {social?.map((item: any) => (
+              <Image
+                src={item?.icon}
+                alt="Bids subs social icons"
+                className="h-24 w-24"
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-12 md:grid md:grid-cols-12 w-full mt-8">
+      <div className="grid grid-cols-12 md:grid md:grid-cols-12 gap-y-6 w-full mt-8">
         <div className="sm:col-span-12 md:col-span-4">
           <span className="text-xl text-white font-semibold">Useful Links</span>
           <div className="flex  flex-col gap-y-4 mt-4">
-            <Link to={'#'} className="text-sm text-white">Cookies Linkolicy</Link>
-            <Link to={'#'} className="text-sm text-white">About Us</Link>
-            <Link to={'#'} className="text-sm text-white">Contact Us</Link>
+            <Link to={"#"} className="text-sm text-white">
+              Cookies Linkolicy
+            </Link>
+            <Link to={"#"} className="text-sm text-white">
+              About Us
+            </Link>
+            <Link to={"#"} className="text-sm text-white">
+              Contact Us
+            </Link>
           </div>
         </div>
         <div className="sm:col-span-12 md:col-span-4">
@@ -69,14 +77,29 @@ export const Footer: React.FC = () => {
           <span className="text-xl text-white font-semibold">
             You can Find us On!
           </span>
-          <div className="flex sm:flex-wrap md:flex-nowrap gap-y-2 items-center gap-x-1 mt-4">
-            <Input onChange={handleEmailSubmit} placeholder="Enter your email" inputClassName="!bg-dark" />
+          <div className="w-full flex sm:items-end sm:flex-col md:flex-col md:items-end lg:flex-row sm:flex-wrap md:flex-nowrap gap-y-2 items-center gap-x-1 mt-4">
+            <Input
+              onChange={handleEmailSubmit}
+              placeholder="Enter your email"
+              inputClassName="!bg-dark"
+            />
 
             <Button
               label="Notify me"
-              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white"
+              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white text-nowrap"
             />
           </div>
+        </div>
+      </div>
+      <div className="w-full  block lg:hidden mt-8">
+        <div className="w-full flex justify-center  items-center sm:flex-wrap">
+          {social?.map((item: any) => (
+            <Image
+              src={item?.icon}
+              alt="Bids subs social icons"
+              className="h-24 w-24"
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -28,15 +28,15 @@ const features = [
   },
 ];
 
-const Features = () => {
+export const SpeedAccuracyProfit = () => {
   return (
-    <section className="text-white py-16 px-4 text-center">
+    <section className="text-white  px-4 text-center">
       <MainHeading
         heading="Speed, Accuracy, Profit"
         subheading="  Everything you need to win more jobs"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12  mt-8">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <img src={feature.image} alt={feature.title} className=" " />
@@ -49,4 +49,3 @@ const Features = () => {
   );
 };
 
-export default Features;

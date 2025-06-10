@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Icons } from "@/assets/Index";
 import MainHeading from "@/common/MainHeading";
-import { Plans } from "@/constants";
+import { StarterPlusPlans } from "@/constants";
 import Image from "@/common/image/Image";
 
 const PricingPlans: React.FC = () => {
@@ -24,7 +24,7 @@ const PricingPlans: React.FC = () => {
             <button
               key={tab}
               onClick={() => setSelectedTab(tab)}
-              className={`px-6 py-2 rounded-md text-sm font-medium transition-colors hover:cursor-pointer ${
+              className={`px-6 py-2 rounded-md text-nowrap text-sm font-medium transition-colors hover:cursor-pointer ${
                 selectedTab === tab
                   ? "bg-blue text-white"
                   : "text-slate-300 hover:text-white"
@@ -37,8 +37,8 @@ const PricingPlans: React.FC = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {Plans?.map((plan) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {StarterPlusPlans?.map((plan) => (
           <div
             key={plan.id}
             className="bg-[#0F1C32] rounded-xl relative p-8 border border-slate-600"
@@ -91,3 +91,66 @@ const PricingPlans: React.FC = () => {
 };
 
 export default PricingPlans;
+
+// import React, { useState } from "react";
+// import MainHeading from "@/common/MainHeading";
+// import { StarterPlus } from "./components/StarterPlus";
+// import { ExpertPlans } from "./components/Expert";
+// import { Starter } from "./components/Starter";
+// import { EvalPlans } from "./components/EvalToLive";
+// import SmoothTabs from "@/common/Tabs/Tabs";
+// const PricingPlans: React.FC = () => {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   const tabItems = [
+//     {
+//       label: "Starter Plus",
+//       content: <StarterPlus />,
+//     },
+//     {
+//       label: "Expert",
+//       content: <ExpertPlans />,
+//     },
+//     {
+//       label: "Starter",
+//       content: <Starter />,
+//     },
+//     {
+//       label: "Eval to Live",
+//       content: <EvalPlans />,
+//     },
+//   ];
+//   return (
+//     <div className="w-full ">
+//       <MainHeading
+//         heading="Pricing Plans"
+//         subheading="Choose what's best for you"
+//       />
+//       <SmoothTabs
+//         tabs={tabItems}
+//         activeTab={activeTab}
+//         setActiveTab={setActiveTab}
+//         activeButtonColor={"blue"}
+//       />
+//       <div className="relative">
+//         {tabItems.map((tab: any, index: any) => (
+//           <div
+//             key={index}
+//             className={`
+//               absolute w-full transition-all duration-300 ease-out
+//               ${
+//                 activeTab === index
+//                   ? "opacity-100 translate-y-0"
+//                   : "opacity-0 translate-y-4 pointer-events-none"
+//               }
+//             `}
+//           >
+//             {tab.content}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default PricingPlans;

@@ -13,7 +13,7 @@ export const JoinOurCommunity = () => {
   };
 
   return (
-    <div className="bg-join-community-bg-gradient w-full py-20 sm:px-0 md:px-16 rounded-[30px] relative">
+    <div className="bg-join-community-bg-gradient w-full py-20 sm:px-3 md:px-16 rounded-[30px] relative">
       <Image
         src={Icons?.joinEllips}
         alt="join Ellips of Bids Subs"
@@ -21,11 +21,11 @@ export const JoinOurCommunity = () => {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 w-full">
         <div className="flex flex-col justify-center">
-          <p className="text-4xl text-white">Join our Community</p>
+          <p className="sm:text-2xl md:text-4xl text-white">Join our Community</p>
           <p className="text-md text-white mt-4">
             Get instant access to weekly newsletter.
           </p>
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-1 mt-10">
+          <div className="flex sm:flex-col sm:items-end md:flex-row  md:items-center gap-y-2 gap-x-1 sm:mt-4 md:mt-10">
             <Input
               onChange={handleEmailSubmit}
               placeholder="Enter your email"
@@ -35,21 +35,17 @@ export const JoinOurCommunity = () => {
 
             <Button
               label="Notify me"
-              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white"
+              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white text-nowrap"
             />
           </div>
         </div>
-        <div className="relative flex justify-end">
+        <div className="relative flex justify-end ">
           <Image
             src={Icons?.joincommunity}
             alt="join community of Bids Subs"
-            className="h-full max-h-[289px] w-[305px]"
+            className="h-fulh md:max-h-[180px] md:w-[180px] lg:max-h-[289px] lg:w-[305px]  hidden md:block"
           />
-          {/* <Image
-            src={Icons?.joinOverly}
-            alt="join community Overlay of Bids Subs"
-            className="absolute top-0 right-0 max-h-[289px] w-[305px]"
-          /> */}
+        
         </div>
       </div>
     </div>

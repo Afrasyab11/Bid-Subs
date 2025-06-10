@@ -15,10 +15,10 @@ const FAQs: React.FC = () => {
   return (
     <div className="w-[95%] md:w-[80%] mx-auto">
       {/* Header Section */}
-      <div className="flex justify-between items-start mb-12">
+      <div className="flex sm:flex-col sm:items-center gap-y-3 md:flex-row md:justify-between items-start mb-12">
         <div>
-          <MainHeading heading="Everything You Need to Know" subheading="" />
-          <p className="text-white font-medium text-[20px]">
+          <MainHeading heading="Everything You Need to Know" classname="text-center" subheading="" />
+          <p className="text-white font-medium text-[15px] md:text-[20px] text-center">
             Got questions? We've got answers
           </p>
         </div>
@@ -56,7 +56,7 @@ const FAQs: React.FC = () => {
                   className="overflow-hidden"
                 >
                   <div className="pb-6 px-0">
-                    <p className="text-slate-300 text-base leading-relaxed w-[80%]">
+                    <p className="text-slate-300 text-base leading-relaxed sm:w-full sm:text-justify md:text-start md:w-[80%]">
                       {item.answer}
                     </p>
                   </div>

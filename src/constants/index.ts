@@ -33,7 +33,7 @@ export const faqData: FAQItem[] = [
   },
 ];
 
-export const Plans: PricingPlan[] = [
+export const StarterPlusPlans: PricingPlan[] = [
   {
     id: "50k",
     title: "$50K Trading Challenge",
@@ -77,6 +77,57 @@ export const Plans: PricingPlan[] = [
       "One-Time Activation Fee Applies",
     ],
   },
+];
+export const expertPlans: PricingPlan[] = [
+  {
+    id: "100k",
+    title: "$100K Expert Challenge",
+    price: "$227",
+    period: "/ year",
+    features: [
+      "Profit Target: $3,000",
+      "Max Position: 3 Contracts",
+      "Daily Loss Limit: $0",
+      "Trailing Max Drawdown: $2,000",
+      "Drawdown Mode: End of Day (EOD)",
+      "One-Time Activation Fee Applies",
+    ],
+  },
+
+];
+export const starterPlans: PricingPlan[] = [
+  {
+    id: "200k",
+    title: "$200K Starter Challenge",
+    price: "$327",
+    period: "/ year",
+    features: [
+      "Profit Target: $3,000",
+      "Max Position: 3 Contracts",
+      "Daily Loss Limit: $0",
+      "Trailing Max Drawdown: $2,000",
+      "Drawdown Mode: End of Day (EOD)",
+      "One-Time Activation Fee Applies",
+    ],
+  },
+
+];
+export const evalPlans: PricingPlan[] = [
+  {
+    id: "300k",
+    title: "$300K Eval To live Challenge",
+    price: "$427",
+    period: "/ year",
+    features: [
+      "Profit Target: $4,000",
+      "Max Position: 3 Contracts",
+      "Daily Loss Limit: $0",
+      "Trailing Max Drawdown: $2,000",
+      "Drawdown Mode: End of Day (EOD)",
+      "One-Time Activation Fee Applies",
+    ],
+  },
+
 ];
 
 export const testimonials: Testimonial[] = [

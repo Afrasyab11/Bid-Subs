@@ -3,12 +3,14 @@ interface SmoothTabsProps {
   activeTab?: number;
   setActiveTab?: any;
   className?: string;
+  activeButtonColor?:any,
 }
 export default function SmoothTabs({
   tabs,
   activeTab = 0,
   setActiveTab,
   className = "",
+  activeButtonColor="dark"
 }: SmoothTabsProps) {
   return (
     <>
@@ -18,7 +20,7 @@ export default function SmoothTabs({
         <div className="relative shadow-tab-shadow bg-semi-dark w-full  max-w-lg rounded-lg p-2 flex items-center mb-8">
           {/* Sliding Background */}
           <div
-            className="absolute h-[calc(100%-8px)] top-1 bg-dark rounded-lg transition-all duration-300 ease-out"
+            className={`absolute h-[calc(100%-8px)] top-1  rounded-lg transition-all duration-300 ease-out bg-${activeButtonColor}`}
             style={{
               width: `calc(${100 / tabs.length}% - 8px)`,
               left: `calc(${activeTab * (100 / tabs.length)}% + 4px)`,
@@ -30,7 +32,7 @@ export default function SmoothTabs({
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`relative flex-1 px-8 py-1 rounded-full text-md  transition-colors duration-300 ${
+              className={`relative flex-1  py-1 text-nowrap rounded-full text-md  transition-colors duration-300 ${
                 activeTab === index ? "text-white" : "text-white"
               }`}
             >

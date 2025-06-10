@@ -49,7 +49,7 @@ const ThirdBoxContent = {
 const WhyManualEstimating = () => {
   return (
     <div className="py-4 -center">
-      <MainHeading heading={ThirdBoxContent.heading} />
+      <MainHeading heading={ThirdBoxContent.heading} classname="sm:text-center md:text-start" />
       <MainHeading
         subheading={ThirdBoxContent.subheading}
         classname="text-[#9A9EA6]"

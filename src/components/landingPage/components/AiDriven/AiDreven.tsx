@@ -26,9 +26,9 @@ export const AiDriven: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
-      <div className="space-y-8 pt-10">
+      <div className="space-y-8 pt-0 xl:pt-10">
         <div>
-          <h1 className="text-4xl lg:text-5xl  mb-4">
+          <h1 className="text-2xl lg:text-5xl  mb-4">
             AI-Driven Estimating,
             <br />
             Start to Finish
