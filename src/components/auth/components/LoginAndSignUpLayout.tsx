@@ -31,22 +31,22 @@ export const LoginAndSignUp = () => {
         <div className="flex flex-col w-full gap-y-3">
           <ButtonWithIcon
             label="Continue with Google"
-            className="bg-semi-dark rounded-lg text-white "
+            className="bg-semi_blue dark:bg-semi-dark rounded-lg text-semi-dark dark:text-white "
           >
             <Image src={Icons?.google} alt="google" className="h-6 w-6" />
           </ButtonWithIcon>
           <ButtonWithIcon
             label="Continue with LinkedIn"
-            className="bg-semi-dark  rounded-lg text-white"
+            className="bg-semi_blue dark:bg-semi-dark  rounded-lg text-semi-dark dark:text-white"
           >
             <Image src={Icons?.linkedIn} alt="linkdIn" className="h-6 w-6" />
           </ButtonWithIcon>
         </div>
         <div className="w-full flex flex-col items-center justify-center gap-y-2 mt-4 mb-7 ">
-          <p className="text-white text-xl font-semibold">
+          <p className="text-semi-dark dark:text-white text-xl font-semibold">
             {activeTab === 0 ? "Sign in to your account" : "Create your account"}
           </p>
-          <p className="text-white text-sm">
+          <p className="text-gray dark:text-white text-sm">
             {activeTab === 0 ? "Welcome back! Please enter your details" : "Please enter your details"}
           </p>
         </div>

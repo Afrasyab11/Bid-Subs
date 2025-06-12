@@ -3,16 +3,14 @@ import { Icons } from "@/assets/Index";
 import Image from "../image/Image";
 import { Link } from "react-router-dom";
 import { ROUTES_ENUM } from "@/constants/routes.constant";
+import { useSession } from "@/sessionManager/SessionContext";
 interface HeaderProps {
   toggleSidebar: () => void;
-  toggleTheme: () => void;
   isSidebarOpen?: any;
   setSidebarOpen?: any;
 }
-export const Header: React.FC<HeaderProps> = ({
-  toggleSidebar,
-  toggleTheme,
-}) => {
+export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
+  const { toggleTheme } = useSession();
   return (
     <header
       className={`

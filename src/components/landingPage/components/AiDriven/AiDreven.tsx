@@ -2,8 +2,9 @@ import React from "react";
 import Image from "@/common/image/Image";
 import { Icons } from "@/assets/Index";
 import Button from "@/common/Button";
-
+import { useSession } from "@/sessionManager/SessionContext";
 export const AiDriven: React.FC = () => {
+  const { theme } = useSession();
   const features = [
     {
       title: "Automatic Takeoff:",
@@ -25,7 +26,7 @@ export const AiDriven: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-semi-dark dark:text-white">
       <div className="space-y-8 pt-0 xl:pt-10">
         <div>
           <h1 className="text-2xl lg:text-5xl  mb-4">
@@ -39,7 +40,7 @@ export const AiDriven: React.FC = () => {
         </div>
 
         {features?.map((item: any) => (
-          <div className="flex items-center gap-x-3 text-white">
+          <div className="flex items-center gap-x-3 text-semi-dark dark:text-white">
             <Image
               src={Icons?.AiDrivenArrow}
               alt="Ai Driven Arrow Icons"
@@ -55,7 +56,7 @@ export const AiDriven: React.FC = () => {
         ))}
         <Button
           label="Try it Now - Free Demo"
-          className="!bg-blue rounded-full !px-3 py-3 gap-x-2 max-w-[276px]"
+          className="!bg-blue text-white dark:!text-white rounded-full !px-3 py-3 gap-x-2 max-w-[276px]"
         >
           {" "}
           <Image src={Icons?.tryNow} alt="Try now" className="h-6 w-6 full " />
@@ -64,7 +65,7 @@ export const AiDriven: React.FC = () => {
 
       <div>
         <Image
-          src={Icons?.AiDriven}
+          src={theme === "light" ? Icons?.aiDrivenLight : Icons?.AiDriven}
           alt="AI Driven"
           className="max-h-[716px] full "
         />

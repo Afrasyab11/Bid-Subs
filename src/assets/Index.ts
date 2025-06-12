@@ -5,10 +5,11 @@ import WinRate from "./LandingImages/SVGs/winrate.svg";
 import HowItWorks from "./LandingImages/SVGs/howItWorks.svg";
 import Ellipse from "./LandingImages/PNGs/Ellipse.png";
 import landingCard1 from "./LandingImages/SVGs/landingCard1.svg";
+import landingCard2Light from "./LandingImages/PNGs/landingCard2Light.png";
 import landingCard2 from "./LandingImages/PNGs/landingCard2.png";
-import landingCard4 from "./LandingImages/PNGs/landingCard4.png";
 import landingCard3 from "./LandingImages/SVGs/landingCard3.svg";
-// import landingCard4 from "./LandingImages/SVGs/landingCard4.svg";
+import landingCard4 from "./LandingImages/PNGs/landingCard4.png";
+import landingCard4Light from "./LandingImages/PNGs/landingCard4Light.png";
 import breifcase from "./LandingImages/SVGs/briefcase.svg";
 import dash_card_icon from "./LandingImages/SVGs/dash_card_icon.svg";
 import dash_upload_btn_icon from "./LandingImages/SVGs/dash_upload_btn_icon.svg";
@@ -44,7 +45,25 @@ import emailWhite from "./LandingImages/SVGs/EmailWhite.svg";
 import joincommunity from "./LandingImages/SVGs/joinCommunity.svg"
 import joinEllips from "./LandingImages/SVGs/joinEllipse.svg"
 import joinOverly from "./LandingImages/PNGs/joinOverly.png"
+import aiDrivenLight from "./LandingImages/SVGs/aiDrivenLight.svg"
+import howWorksLight from "./LandingImages/SVGs/howWorksLight.svg"
+import hero175 from "./LandingImages/SVGs/hero175.svg"
+import hero59772 from "./LandingImages/SVGs/hero59772.svg"
+import heroDashboard from "./LandingImages/SVGs/heroDashboard.svg"
+import heroDashboardLight from "./LandingImages/SVGs/heroDashboardLight.svg"
+import heroDashboardVecotorLight from "./LandingImages/SVGs/heroDashboardVectorLight.svg"
+import heroGradient from "./LandingImages/SVGs/heroGradient.svg"
 export const Icons = {
+  heroGradient,
+  hero175,
+  hero59772,
+  heroDashboard,
+  heroDashboardLight,
+  heroDashboardVecotorLight,
+  landingCard2Light,
+  landingCard4Light,
+  aiDrivenLight,
+  howWorksLight,
   joincommunity,
   joinOverly,
   joinEllips,

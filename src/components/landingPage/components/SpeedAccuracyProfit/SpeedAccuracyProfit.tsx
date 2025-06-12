@@ -30,7 +30,7 @@ const features = [
 
 export const SpeedAccuracyProfit = () => {
   return (
-    <section className="text-white  px-4 text-center">
+    <section className=" px-4 text-center">
       <MainHeading
         heading="Speed, Accuracy, Profit"
         subheading="  Everything you need to win more jobs"
@@ -41,7 +41,7 @@ export const SpeedAccuracyProfit = () => {
           <div key={index} className="flex flex-col items-center text-center">
             <img src={feature.image} alt={feature.title} className=" " />
             <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-            <p className="text-lightgray text-sm">{feature.description}</p>
+            <p className="text-md text-gray dark:text-white">{feature.description}</p>
           </div>
         ))}
       </div>

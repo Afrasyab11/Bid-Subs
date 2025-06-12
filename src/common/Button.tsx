@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       title={title}
       onClick={onClick}
-      className={`bg-blue py-2 px-4 w-full flex justify-center items-center ${className}`}
+      className={`bg-blue py-3 px-4 w-full flex justify-center items-center ${className}`}
       disabled={disabled || isLoading}
     >
       {isLoading ? (

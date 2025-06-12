@@ -18,8 +18,8 @@ const Testimonials: React.FC = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <span
         key={index}
-        className={`text-sm ${
-          index < rating ? "text-blue" : "text-slate-600"
+        className={`text-md ${
+          index < rating ? "text-orange-500 dark:text-blue" : "text-slate-600"
         }`}
       >
         ★
@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
             heading="Real Experiences from Real People"
             subheading=""
           />
-          <p className="text-white font-medium text-[20px]">
+          <p className="text-gray dark:text-white font-normal text-[17px]">
             Trusted by subcontractors who bid smarter, faster, and win more.
           </p>
         </div>
@@ -47,7 +47,7 @@ const Testimonials: React.FC = () => {
             ref={prevRef}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors"
           >
             <FiChevronLeft className="w-5 h-5" />
           </motion.button>
@@ -55,9 +55,9 @@ const Testimonials: React.FC = () => {
             ref={nextRef}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors"
           >
-            <FiChevronRight className="w-5 h-5" />
+            <FiChevronRight className="w-5 h-5 " />
           </motion.button>
         </div>
       </div>
@@ -97,18 +97,18 @@ const Testimonials: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-xl p-6 relative border border-slate-700 h-full bg-light_dark/50"
+              className="rounded-xl p-6 relativeh-full bg-semi_blue dark:bg-light_dark/50"
             >
               <Image src={Icons?.testoEllips} alt="ellips" className="absolute right-0 top-0 h-full w-full" />
               {/* User Info */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-semibold">
+                  <span className="text-semi-dark dark:text-white text-sm font-semibold">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <h4 className="text-white font-medium text-sm">
+                  <h4 className="text-semi-dark dark:text-white font-medium text-sm">
                     {testimonial.name}
                   </h4>
                 </div>
@@ -123,7 +123,7 @@ const Testimonials: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-slate-300 text-md leading-relaxed">
+              <p className="text-gray dark:text-slate-300 text-md leading-relaxed">
                 {testimonial.text}
               </p>
             </motion.div>

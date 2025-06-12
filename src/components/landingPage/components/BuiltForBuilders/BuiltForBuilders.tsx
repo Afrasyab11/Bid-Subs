@@ -14,7 +14,7 @@ export const BuiltForBuilders = () => {
         />
       </div>
 
-      <p className="text-center max-w-1/2 max-sm:w-full sm:text-justify md:text-center w-full max-w-4xl sm:px-2 md:p-0">
+      <p className="text-center max-w-1/2 max-sm:w-full sm:text-justify md:text-center text-gray dark:text-white w-full max-w-4xl sm:px-2 md:p-0">
         At BidSubs, we’re reshaping how subcontractors bid. Born from real
         construction experience and powered by AI, our platform turns blueprints
         into accurate, ready-to-send proposals—fast. No more guesswork, no more

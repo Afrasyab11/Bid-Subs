@@ -30,9 +30,9 @@ export const Login = () => {
       <div className="flex justify-between items-center">
         <div className="flex gap-x-3">
           <Checkbox value={true} />{" "}
-          <label className="text-white text-sm">Remember me</label>
+          <label className="text-gray dark:text-white text-sm">Remember me</label>
         </div>
-        <Link to={ROUTES_ENUM?.RES_PASSWORD} className="text-white text-sm">
+        <Link to={ROUTES_ENUM?.RES_PASSWORD} className="text-gray dark:text-white text-sm">
           Forgot Password?
         </Link>
       </div>

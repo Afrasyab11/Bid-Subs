@@ -10,33 +10,36 @@ import { OTP } from "./components/auth/components/Otp";
 import { CreatePassword } from "./components/auth/components/CreatePassword";
 import { PasswordChange } from "./components/auth/components/PasswordChange";
 import { LoginAndSignUp } from "./components/auth/components/LoginAndSignUpLayout";
+import { SessionProvider } from "./sessionManager/SessionContext";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path={ROUTES_ENUM.ROOT} element={<Landing />} />
-          <Route element={<AuthLayout />}>
-            <Route path={ROUTES_ENUM.LOGIN} element={<LoginAndSignUp />} />
-            <Route
-              index
-              path={ROUTES_ENUM.PASS_CHANGE}
-              element={<PasswordChange />}
-            />
-            <Route
-              path={ROUTES_ENUM.CRE_PASSWORD}
-              element={<CreatePassword />}
-            />
-            <Route path={ROUTES_ENUM.OPT} element={<OTP />} />
-            <Route
-              path={ROUTES_ENUM.RES_PASSWORD}
-              element={<ResetPassword />}
-            />
-          </Route>
-          <Route path={"/"} element={<DashboardLayout />}>
-            <Route path={ROUTES_ENUM.DASHBOARD} element={<Dashboard />} />
-          </Route>
-        </Routes>
+        <SessionProvider>
+          <Routes>
+            <Route path={ROUTES_ENUM.ROOT} element={<Landing />} />
+            <Route element={<AuthLayout />}>
+              <Route path={ROUTES_ENUM.LOGIN} element={<LoginAndSignUp />} />
+              <Route
+                index
+                path={ROUTES_ENUM.PASS_CHANGE}
+                element={<PasswordChange />}
+              />
+              <Route
+                path={ROUTES_ENUM.CRE_PASSWORD}
+                element={<CreatePassword />}
+              />
+              <Route path={ROUTES_ENUM.OPT} element={<OTP />} />
+              <Route
+                path={ROUTES_ENUM.RES_PASSWORD}
+                element={<ResetPassword />}
+              />
+            </Route>
+            <Route path={"/"} element={<DashboardLayout />}>
+              <Route path={ROUTES_ENUM.DASHBOARD} element={<Dashboard />} />
+            </Route>
+          </Routes>
+        </SessionProvider>
       </BrowserRouter>
     </>
   );

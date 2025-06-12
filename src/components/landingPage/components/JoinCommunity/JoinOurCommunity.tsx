@@ -13,7 +13,7 @@ export const JoinOurCommunity = () => {
   };
 
   return (
-    <div className="bg-join-community-bg-gradient w-full py-20 sm:px-3 md:px-16 rounded-[30px] relative">
+    <div className="bg-blue/60 dark:bg-join-community-bg-gradient w-full py-20 sm:px-3 md:px-16 rounded-[30px] relative">
       <Image
         src={Icons?.joinEllips}
         alt="join Ellips of Bids Subs"
@@ -35,7 +35,7 @@ export const JoinOurCommunity = () => {
 
             <Button
               label="Notify me"
-              className="!bg-blue rounded-md px-4 py-3 max-w-[117px] text-white text-nowrap"
+              className="bg-white text-semi-dark dark:!bg-blue rounded-md px-4 py-3 max-w-[117px] dark:!text-white text-nowrap"
             />
           </div>
         </div>

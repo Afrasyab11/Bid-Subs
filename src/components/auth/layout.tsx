@@ -17,9 +17,9 @@ export const Layout = ({ children }: layoutProps) => {
             />
         </div>
 
-        <div className="z-30 bg-dark  rounded-lg sm:px-2 py-6 md:p-6 h-full min-h-[100vh] sm:w-full md:w-[500px]">
+        <div className="z-30 bg-white dark:bg-dark  rounded-lg sm:px-2 py-6 md:p-6 h-full min-h-[100vh] sm:w-full md:w-[500px]">
           <div className="w-full flex justify-center">
-            <p className="text-white text-2xl font-bold">Bids Sub</p>
+            <p className="text-semi-dark dark:text-white text-2xl font-bold">Bids Sub</p>
           </div>
           <div className="mt-8">{children}</div>
         </div>

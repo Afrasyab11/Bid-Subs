@@ -19,7 +19,7 @@ const PricingPlans: React.FC = () => {
 
       {/* Tab Navigation */}
       <div className="flex justify-center my-10">
-        <div className="bg-slate-800 p-1 rounded-lg flex sm:overflow-x-scroll md:overflow-auto">
+        <div className="bg-semi_blue dark:bg-slate-800 p-1 rounded-lg flex sm:overflow-x-scroll md:overflow-auto">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -27,7 +27,7 @@ const PricingPlans: React.FC = () => {
               className={`px-6 py-2 rounded-md text-nowrap text-sm font-medium transition-colors hover:cursor-pointer ${
                 selectedTab === tab
                   ? "bg-blue text-white"
-                  : "text-slate-300 hover:text-white"
+                  : "text-mid-gray dark:text-slate-300 "
               }`}
             >
               {tab}
@@ -41,7 +41,7 @@ const PricingPlans: React.FC = () => {
         {StarterPlusPlans?.map((plan) => (
           <div
             key={plan.id}
-            className="bg-[#0F1C32] rounded-xl relative p-8 border border-slate-600"
+            className="bg-semi_blue dark:bg-semi-dark rounded-xl relative p-8 "
           >
             <img
               src={Icons?.Ellipse}
@@ -49,7 +49,7 @@ const PricingPlans: React.FC = () => {
               className="absolute top-0"
             />
             {/* Plan Title */}
-            <h3 className="text-white text-xl font-semibold mb-6">
+            <h3 className="text-semi-dark dark:text-white text-xl font-semibold mb-6">
               {plan.title}
             </h3>
 
@@ -77,7 +77,7 @@ const PricingPlans: React.FC = () => {
                 <div key={index} className="flex items-start gap-x-3">
                   <Image src={Icons?.checkPlan} alt="check" className="h-8 w-8" />
                   {/* <FiCheck className="w-5 h-5 text-blue mt-0.5 mr-3 flex-shrink-0" /> */}
-                  <span className="text-slate-300 text-sm leading-relaxed">
+                  <span className="text-semi-dark dark:text-slate-300 text-sm leading-relaxed">
                     {feature}
                   </span>
                 </div>

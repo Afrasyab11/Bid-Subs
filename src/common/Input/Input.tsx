@@ -56,8 +56,8 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
       <div className={`w-full ${containerClassName}`}>
         <div
           className={`
-            relative flex items-center
-            bg-semi-dark backdrop-blur-sm
+            relative flex items-center bg-semi_blue
+            dark:bg-semi-dark backdrop-blur-sm
             border border-slate-700/50
             rounded-lg overflow-hidden
             ${isFocused ? "border-blue-500/50 ring-1 ring-blue-500/20" : ""}
@@ -95,8 +95,8 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
             spellCheck="false"
             data-form-type="other"
             className={`
-  flex-1 px-4 py-3
-  bg-semi-dark
+  flex-1 px-4 py-3 bg-semi_blue
+  dark:bg-semi-dark
   text-white placeholder-slate-400
   border-none outline-none
   text-base

@@ -14,7 +14,7 @@ import { BuiltForBuilders } from "./components/BuiltForBuilders/BuiltForBuilders
 export const Landing = () => {
   
   return (
-    <div className="bg-dark ">
+    <div className="bg-white dark:bg-dark ">
       <Header/>
         <Hero/>
       <div className=" sm:px-2 md:px-[20px] lg:px-[40px] xl:px-[80px] flex flex-col items-center justify-center sm:gap-y-16 md:gap-y-24">
