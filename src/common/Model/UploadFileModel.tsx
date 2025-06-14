@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Upload, ArrowLeft, Folder, FileText } from "lucide-react";
+import { Upload, ArrowLeft, FileText } from "lucide-react";
 import Button from "../Button";
+import { IoFolder } from "react-icons/io5";
 
 interface ProjectUploadModalProps {
   isOpen: boolean;
@@ -87,11 +88,11 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
     );
   };
 
-  // const handleNext = () => {
-  //   if (currentStep < 3) {
-  //     setCurrentStep((prev) => (prev + 1) as Step);
-  //   }
-  // };
+  const handleNext = () => {
+    if (currentStep < 3) {
+      setCurrentStep((prev) => (prev + 1) as Step);
+    }
+  };
 
   const handleBack = () => {
     if (currentStep > 1) {
@@ -99,35 +100,18 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
     }
   };
 
-  const handleSubmit = () => {
-    console.log("Project submitted:", {
-      title: projectTitle,
-      files: uploadedFiles,
-      trade: selectedTrade,
-      bids: selectedBids,
-    });
-    // Reset form and close modal
-    setCurrentStep(1);
-    setProjectTitle("");
-    setUploadedFiles([]);
-    setSelectedTrade("");
-    setSelectedBids([]);
-    onClose();
-  };
-
-
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#252525]/50 bg-opacity-25 flex items-center justify-center z-50 p-4 overflow-auto">
-      <div className="bg-semi_blue dark:bg-dark rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
+    <div className="fixed inset-0 bg-[#252525]/60 bg-opacity-25 flex items-center justify-center z-50 p-4 overflow-auto">
+      <div className="bg-white dark:bg-dark rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center gap-x-6 p-6 w-full border-b border-slate-700">
           <div className="flex items-center space-x-8 w-full">
             {currentStep > 1 && (
               <button
                 onClick={handleBack}
-                className="text-slate-400 hover:text-white transition-colors"
+                className="text-gray dark:text-white transition-colors"
               >
                 <ArrowLeft size={20} />
               </button>
@@ -139,19 +123,22 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                   className="flex flex-col gap-y-3 justify-center w-full items-center space-x-3"
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center flex-col justify-center text-sm font-medium ${
+                    onClick={handleNext}
+                    className={`w-8 h-8 rounded-full flex items-center cursor-pointer flex-col justify-center text-sm font-medium ${
                       step === currentStep
-                        ? "bg-blue text-white"
+                        ? "bg-blue text-white dark:text-white"
                         : step < currentStep
-                        ? "bg-blue-600 text-white"
-                        : "bg-navy_light text-slate-300"
+                        ? "bg-gray dark:bg-navy_light text-white"
+                        : "bg-gray dark:bg-navy_light text-white"
                     }`}
                   >
                     {step}
                   </div>
                   <span
                     className={`text-sm font-medium ${
-                      step === currentStep ? "text-white" : "text-slate-400"
+                      step === currentStep
+                        ? "text-dark dark:text-white"
+                        : "text-slate-400"
                     }`}
                   >
                     {step === 1
@@ -179,7 +166,7 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                   value={projectTitle}
                   onChange={(e) => setProjectTitle(e.target.value)}
                   placeholder="Project title"
-                  className="w-full bg-navy_light border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full bg-semi_blue dark:bg-navy_light  rounded-lg px-4 py-3 text-white placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
 
@@ -190,15 +177,13 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                 <div
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
-                  className="border-2 border-dashed border-slate-600 rounded-lg p-12 text-center bg-navy_light hover:bg-navy_light transition-colors cursor-pointer"
+                  className=" rounded-lg p-12 text-center bg-semi_blue dark:bg-navy_light   cursor-pointer"
                   onClick={() => fileInputRef.current?.click()}
                 >
-                  <Upload size={48} className="mx-auto text-slate-400 mb-4" />
-                  <p className="text-slate-300 mb-2">Drag and drop files</p>
-                  <p className="text-slate-400 text-sm mb-4">
-                    .pdf, .dwg, .zip
-                  </p>
-                  <button className="bg-white text-slate-800 px-6 py-2 rounded-lg font-medium hover:bg-slate-100 transition-colors">
+                  <Upload size={48} className="mx-auto text-gray mb-4" />
+                  <p className="text-gray mb-2">Drag and drop files</p>
+                  <p className="text-gray text-sm mb-4">.pdf, .dwg, .zip</p>
+                  <button className="bg-blue dark:bg-white text-white dark:text-dark px-6 py-2 rounded-lg font-medium  ">
                     Select files
                   </button>
                   <input
@@ -233,13 +218,13 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                   key={trade.id}
                   onClick={() => handleTradeSelect(trade.id)}
                   className={`flex flex-col items-center p-4 rounded-lg transition-colors ${
-                    selectedTrade === trade.id
-                      ? "bg-blue-600 text-white"
-                      : "bg-slate-700 text-slate-300 hover:bg-slate-600"
+                    selectedTrade === trade.id ? " text-blue " : " text-blue "
                   }`}
                 >
-                  <Folder size={32} className="mb-2" />
-                  <span className="text-sm font-medium">{trade.name}</span>
+                  <IoFolder size={50} className="mb-2" />
+                  <span className="text-sm font-medium text-blue dark:text-white">
+                    {trade.name}
+                  </span>
                 </button>
               ))}
             </div>
@@ -248,39 +233,44 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
           {currentStep === 3 && (
             <div className="grid grid-cols-6 gap-4">
               {bids.map((bid) => (
-                <button
-                  key={bid.id}
-                  onClick={() => handleBidToggle(bid.id)}
-                  className={`flex flex-col items-center p-4 rounded-lg transition-colors ${
-                    selectedBids.includes(bid.id)
-                      ? "bg-blue-600 text-white"
-                      : "bg-slate-700 text-slate-300 hover:bg-slate-600"
-                  }`}
-                >
-                  <FileText size={32} className="mb-2" />
-                  <span className="text-sm font-medium">{bid.name}</span>
-                </button>
+                <div className="flex flex-col items-center justify-center">
+                  <button
+                    key={bid.id}
+                    onClick={() => handleBidToggle(bid.id)}
+                    className={`flex flex-col items-center p-2 rounded-lg transition-colors ${
+                      selectedBids.includes(bid.id)
+                        ? "bg-blue text-white "
+                        : "bg-blue/10  dark:bg-navy_blue text-blue dark:text-blue "
+                    }`}
+                  >
+                    <FileText size={50} className="mb-2" />
+                  </button>
+                  <span className="text-sm  mt-3 font-medium text-blue dark:text-white">
+                    {bid.name}
+                  </span>
+                </div>
               ))}
             </div>
           )}
         </div>
 
         {/* Footer */}
-        <div className="flex justify-end space-x-4 p-6 border-t border-slate-700">
-          <Button
-            onClick={onClose}
-            label="Cancel"
-            className="py-2 hover:text-white transition-colors px-4 rounded-md max-w-[80px] text-blue bg-[#1350E51A]/10"
-          />
-          {currentStep < 3 && (
+        {currentStep == 1 && (
+          <div className="flex justify-end space-x-4 p-6 ">
             <Button
-              onClick={handleSubmit}
-              label="Upload Project"
-              className="bg-blue max-w-[160px] text-white px-6 py-2 rounded-lg  transition-colors"
+              onClick={onClose}
+              label="Cancel"
+              className="py-2  dark:text-white transition-colors px-4 rounded-md max-w-[80px] bg-blue/10 text-blue dark:bg-[#1350E51A]/10"
             />
-           
-          )}
-        </div>
+            {currentStep < 3 && (
+              <Button
+                onClick={handleNext}
+                label="Upload Project"
+                className="bg-blue max-w-[160px] text-white px-6 py-2 rounded-lg  transition-colors"
+              />
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
