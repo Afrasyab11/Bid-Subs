@@ -51,9 +51,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       `}
       >
         <div className="flex items-center justify-between p-4 ">
-          <h1 className="text-xl font-bold text-black dark:text-white">
-            Bids Sub
-          </h1>
+          <Image src={Icons?.darkAuthLogo} className="h-auto w-auto" />
           <button
             onClick={toggleSidebar}
             className="lg:hidden p-2 rounded-md hover:bg-slate-700"

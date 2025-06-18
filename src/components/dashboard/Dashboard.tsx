@@ -10,6 +10,7 @@ import Image from "@/common/image/Image";
 import { Icons } from "@/assets/Index";
 import { useState } from "react";
 import { ProjectUploadModal } from "@/common/Model/UploadFileModel";
+import Button from "@/common/Button";
 // TypeScript interfaces
 interface StatsCard {
   title: string;
@@ -79,7 +80,7 @@ const Dashboard: React.FC = () => {
       {/* <div className="flex-1 flex flex-col overflow-hidden"> */}
       <main className="flex-1 overflow-auto p-6 bg-white dark:bg-dark rounded-3xl">
         {/* Welcome Message */}
-        <div className="mb-6 flex justify-between">
+        <div className="mb-6 flex sm:flex-col gap-y-2 md:flex-row md:justify-between">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-gray dark:text-white">
@@ -90,13 +91,15 @@ const Dashboard: React.FC = () => {
               Here's a quick snapshot of your current estimating activity.
             </p>
           </div>
-          <button
+          <Button
+ 
+            label=""
             onClick={() => setIsModalOpen(true)}
-            className="bg-blue text-white max-h-10 px-4 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
+            className="bg-blue w-fit text-white max-w-sm max-h-10 px-4 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
           >
             <Image src={Icons?.dash_upload_btn_icon} className="h-6 w-6" />
             Upload Project
-          </button>
+          </Button>
         </div>
 
         {/* Stats Cards */}

@@ -8,6 +8,7 @@ export const Signup = () => {
     email: "",
     fullName: "",
     password: "",
+    remember: false,
   });
   return (
     <>
@@ -16,13 +17,13 @@ export const Signup = () => {
           value={payload?.fullName}
           placeholder="Full Name"
           icon={Icons?.profile}
-          onChange={(e) => console.log("full name", e)}
+          onChange={(e) => setPayload({ ...payload, fullName: e.target.value })}
         />
         <Input
           value={payload?.email}
           placeholder="Email"
           icon={Icons?.email}
-          onChange={(e) => console.log("email", e)}
+          onChange={(e) => setPayload({ ...payload, email: e.target.value })}
         />
 
         <Input
@@ -30,12 +31,17 @@ export const Signup = () => {
           placeholder="Password"
           type="password"
           icon={Icons?.lock}
-          onChange={(e) => setPayload({...payload,password:e.target.value})}
+          onChange={(e) => setPayload({ ...payload, password: e.target.value })}
           showPasswordToggle={true}
         />
         <div className="flex justify-between items-center">
           <div className="flex gap-x-3">
-            <Checkbox value={true} />{" "}
+            <Checkbox
+              value={payload?.remember}
+              onChange={(e) => {
+                setPayload({ ...payload, remember: e.target.checked });
+              }}
+            />
             <label className="text-white text-sm">Remember me</label>
           </div>
         </div>

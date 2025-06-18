@@ -26,7 +26,7 @@ export const AiDriven: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-semi-dark dark:text-white">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-semi-dark dark:text-white w-full">
       <div className="space-y-8 pt-0 xl:pt-10">
         <div>
           <h1 className="text-2xl lg:text-5xl  mb-4">
@@ -59,7 +59,7 @@ export const AiDriven: React.FC = () => {
           className="!bg-blue text-white dark:!text-white rounded-full !px-3 py-3 gap-x-2 max-w-[276px]"
         >
           {" "}
-          <Image src={Icons?.tryNow} alt="Try now" className="h-6 w-6 full " />
+          <Image src={Icons?.tryNow} alt="Try now" className="h-6 w-6" />
         </Button>
       </div>
 
@@ -67,7 +67,7 @@ export const AiDriven: React.FC = () => {
         <Image
           src={theme === "light" ? Icons?.aiDrivenLight : Icons?.AiDriven}
           alt="AI Driven"
-          className="max-h-[716px] full "
+          className="max-h-[716px] w-full "
         />
       </div>
     </div>

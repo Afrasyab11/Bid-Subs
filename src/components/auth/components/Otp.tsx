@@ -1,42 +1,21 @@
-import { Input } from "@/common/Input/Input";
-// import { useState } from "react";
-import { Icons } from "@/assets/Index";
-import { Link } from "react-router-dom";
-import Button from "@/common/Button";
+import { useState } from "react";
 import { Layout } from "../layout";
-import { ROUTES_ENUM } from "@/constants/routes.constant";
+import { OTPInput } from "@/common/Otp-Input/OTP";
+
 export const OTP = () => {
-//   const [payload, setPayload] = useState({
-//     otp: "",
-//   });
+  const [payload, setPayload] = useState({
+    otp: "",
+  });
+
+  const handleOTPSubmit = (otp: any) => {
+    setPayload(otp);
+    alert(`OTP submitted: ${otp}`);
+  };
+  console.log(payload);
   return (
     <Layout>
       <div className="w-full flex flex-col justify-center items-center h-full gap-y-3 min-h-[75vh] sm:px-2 md:px-10">
-        <div className=" w-full flex flex-col  gap-y-3">
-          <div className="w-full flex flex-col items-center justify-center gap-y-2 mt-4 mb-7 ">
-            <p className="text-semi-dark dark:text-white text-xl font-semibold">OTP Code</p>
-            <p className=" text-sm text-gray">
-              Type the code we have sent you on your registered email
-            </p>
-          </div>
-          <Input
-            // value={payload?.otp}
-            placeholder="OTP"
-            icon={Icons?.email}
-            onChange={(e) => console.log("password", e)}
-          />
-          <Link to={ROUTES_ENUM?.CRE_PASSWORD}>
-            <Button
-              label="Submit"
-              className="bg-blue w-full text-white rounded-lg mt-4 "
-            />
-          </Link>
-
-          <div className="flex w-full justify-center gap-x-2 mt-4">
-            <p className="text-semi-dark dark:text-white">Code can be resend in 00:35</p>
-          </div>
-          <Button label="Send" className="text-gray bg-transparent" />
-        </div>
+        <OTPInput onSubmit={handleOTPSubmit} />
       </div>
     </Layout>
   );

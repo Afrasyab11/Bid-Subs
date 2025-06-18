@@ -18,13 +18,5 @@ export const DashboardLayout = () => {
         </main>
       </div>
     </div>
-
-    // <div className={`flex h-screen bg-semi_blue dark:bg-semi-dark text-white"`}>
-    //   <Sidebar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
-    //   <div className="flex-1 flex flex-col overflow-hidden">
-    //     <Header toggleSidebar={toggleSidebar} toggleTheme={toggleTheme} />
-    //     <Outlet />
-    //   </div>
-    // </div>
   );
 };
