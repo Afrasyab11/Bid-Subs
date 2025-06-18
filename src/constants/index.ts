@@ -1,3 +1,4 @@
+import { Icons } from "@/assets/Index";
 import type { FAQItem, PricingPlan, Testimonial } from "../utils/types";
 
 export const faqData: FAQItem[] = [
@@ -93,7 +94,6 @@ export const expertPlans: PricingPlan[] = [
       "One-Time Activation Fee Applies",
     ],
   },
-
 ];
 export const starterPlans: PricingPlan[] = [
   {
@@ -110,7 +110,6 @@ export const starterPlans: PricingPlan[] = [
       "One-Time Activation Fee Applies",
     ],
   },
-
 ];
 export const evalPlans: PricingPlan[] = [
   {
@@ -127,7 +126,6 @@ export const evalPlans: PricingPlan[] = [
       "One-Time Activation Fee Applies",
     ],
   },
-
 ];
 
 export const testimonials: Testimonial[] = [
@@ -136,29 +134,34 @@ export const testimonials: Testimonial[] = [
     name: "Samantha K.",
     rating: 5,
     text: "We used to spend 8-10 hours on a single bid. Now it's done in under an hour—with better accuracy.",
+    profile: Icons?.profilePicture,
   },
   {
     id: 2,
     name: "Samantha K.",
     rating: 5,
     text: "With BidSubs, we're not just faster—we're sharper, more competitive, and more profitable.",
+    profile: Icons?.profilePicture,
   },
   {
     id: 3,
     name: "Samantha K.",
     rating: 5,
     text: "The AI does what used to take hours. It even pulls current pricing and formats our proposals.",
+    profile: Icons?.profilePicture,
   },
   {
     id: 4,
     name: "Sam L.",
     rating: 5,
     text: "It's made my bidding process so much more efficient—not just good, but great.",
+    profile: Icons?.profilePicture,
   },
   {
     id: 5,
     name: "Michael R.",
     rating: 5,
     text: "The accuracy is incredible. We're winning more bids and spending less time on estimates.",
+    profile: Icons?.profilePicture,
   },
 ];

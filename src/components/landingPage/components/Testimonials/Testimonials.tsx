@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import "swiper/css";
@@ -28,7 +28,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="w-full mb-10">
+    <div className="w-full mb-10 pl-0 md:pl-12 lg:pl-20">
       {/* Header with Navigation */}
       <div className="flex justify-between items-start mb-12">
         <div>
@@ -47,7 +47,7 @@ const Testimonials: React.FC = () => {
             ref={prevRef}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors"
+            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors cursor-pointer"
           >
             <FiChevronLeft className="w-5 h-5" />
           </motion.button>
@@ -64,13 +64,31 @@ const Testimonials: React.FC = () => {
 
       {/* Testimonials Slider */}
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Mousewheel, FreeMode]}
         spaceBetween={24}
         slidesPerView={1}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
+        mousewheel={{
+          enabled: true,
+          forceToAxis: true,
+          sensitivity: 1,
+          releaseOnEdges: true,
+        }}
+        freeMode={{
+          enabled: true,
+          sticky: false,
+          momentum: true,
+          momentumRatio: 0.6,
+          momentumVelocityRatio: 0.6,
+        }}
+        grabCursor={true}
+        touchRatio={1}
+        touchAngle={45}
+        simulateTouch={true}
+        allowTouchMove={true}
         onBeforeInit={(swiper) => {
           if (
             swiper.params.navigation &&
@@ -97,15 +115,17 @@ const Testimonials: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-xl p-6 relativeh-full bg-semi_blue dark:bg-light_dark/50"
+              className="rounded-3xl p-6 relative h-full bg-semi_blue dark:bg-light_dark/50 min-h-[230px]"
             >
-              <Image src={Icons?.testoEllips} alt="ellips" className="absolute right-0 top-0 h-full w-full" />
+              <Image
+                src={Icons?.testoEllips}
+                alt="ellips"
+                className="absolute right-0 top-0 h-full w-full rounded-3xl"
+              />
               {/* User Info */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-semi-dark dark:text-white text-sm font-semibold">
-                    {testimonial.name.charAt(0)}
-                  </span>
+                  <img src={testimonial.profile} alt={testimonial.name} />
                 </div>
                 <div>
                   <h4 className="text-semi-dark dark:text-white font-medium text-sm">
