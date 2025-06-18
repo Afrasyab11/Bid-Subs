@@ -94,7 +94,7 @@ const Dashboard: React.FC = () => {
           <Button
             label=""
             onClick={() => setIsModalOpen(true)}
-            className="bg-blue w-fit text-white max-w-sm max-h-10 px-4 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
+            className="bg-blue w-fit text-white max-w-28 max-h-10 px-4 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
           >
             <Image src={Icons?.dash_upload_btn_icon} className="h-6 w-6" />
             Upload Project
