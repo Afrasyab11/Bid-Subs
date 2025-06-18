@@ -40,8 +40,8 @@ export const SpeedAccuracyProfit = () => {
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <img src={feature.image} alt={feature.title} className=" " />
-            <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-            <p className="text-md text-gray dark:text-white">{feature.description}</p>
+            <h3 className="text-lg font-medium mb-2 text-gray dark:text-white">{feature.title}</h3>
+            <p className="text-md text-gray dark:text-[#FDFFF7E5]">{feature.description}</p>
           </div>
         ))}
       </div>

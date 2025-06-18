@@ -20,7 +20,7 @@ const Herocontent = {
 const Hero = () => {
   const { theme } = useSession();
   return (
-    <div className=" flex flex-col relative items-center justify-center text-center px-4 ">
+    <div className=" flex flex-col relative items-center pt-6 justify-center text-center px-4 ">
       <Image
         className="absolute w-full h-full left-0 top-0  z-0 opacity-40"
         src={theme === "light" ? Icons?.heroGradient : blue}

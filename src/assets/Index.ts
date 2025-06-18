@@ -53,7 +53,11 @@ import heroDashboard from "./LandingImages/SVGs/heroDashboard.svg"
 import heroDashboardLight from "./LandingImages/SVGs/heroDashboardLight.svg"
 import heroDashboardVecotorLight from "./LandingImages/SVGs/heroDashboardVectorLight.svg"
 import heroGradient from "./LandingImages/SVGs/heroGradient.svg"
+import darkAuthLogo from "./LandingImages/SVGs/darkAuthLogo.svg";
+import whiteAuthLogo from "./LandingImages/SVGs/whiteAuthLogo.svg"
 export const Icons = {
+  whiteAuthLogo,
+  darkAuthLogo,
   heroGradient,
   hero175,
   hero59772,
