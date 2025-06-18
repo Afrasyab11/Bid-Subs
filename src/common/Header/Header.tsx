@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
           onClick={toggleSidebar}
           className="lg:hidden p-2 rounded-md hover:bg-slate-700"
         >
-          <Menu size={20} />
+          <Menu size={20} className="text-dark dark:text-white" />
         </button>
       </div>
 

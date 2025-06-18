@@ -1,5 +1,6 @@
 import Image from "@/common/image/Image";
 import { Icons } from "@/assets/Index";
+import Logo from "@/common/Logo";
 interface layoutProps {
   children?: any;
 }
@@ -18,11 +19,7 @@ export const Layout = ({ children }: layoutProps) => {
 
         <div className="z-30 bg-white dark:bg-dark sm:rounded-none  md:rounded-lg sm:px-2 py-6 md:p-6 h-full min-h-[100vh] sm:w-full md:w-[500px]">
           <div className="w-full flex justify-center">
-            <Image
-              src={Icons?.darkAuthLogo}
-              alt="Hero section Image"
-              className="w-auto h-auto "
-            />
+            <Logo />
           </div>
           <div className="mt-8">{children}</div>
         </div>

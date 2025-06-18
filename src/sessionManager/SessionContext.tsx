@@ -28,7 +28,7 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({
     const storedTheme = localStorage.getItem("theme") || "light";
     setTheme(storedTheme);
     document.documentElement.classList.toggle("dark", storedTheme === "dark");
-  }, []);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";

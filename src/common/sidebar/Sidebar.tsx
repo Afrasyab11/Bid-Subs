@@ -6,44 +6,48 @@ import { PiNotificationFill } from "react-icons/pi";
 import Image from "../image/Image";
 import { Icons } from "@/assets/Index";
 import { X } from "lucide-react";
+import { useSession } from "@/sessionManager/SessionContext";
+import Logo from "../Logo";
 interface SidebarProps {
   toggleSidebar: () => void;
   isSidebarOpen?: any;
   setSidebarOpen?: any;
 }
+interface SidebarItem {
+  icon: React.ReactNode;
+  label: string;
+  isActive?: boolean;
+  section?: string;
+}
+// Sidebar items
+const sidebarItems: SidebarItem[] = [
+  { icon: <RxDashboard size={20} />, label: "Dashboard" },
+  { icon: <LuBriefcaseBusiness size={20} />, label: "Projects" },
+  { icon: <PiNotificationFill size={20} />, label: "Takeoffs" },
+  { icon: <PiNotificationFill size={20} />, label: "Estimates" },
+  { icon: <PiNotificationFill size={20} />, label: "Proposals" },
+  { icon: <PiNotificationFill size={20} />, label: "Templates" },
+  { icon: <PiNotificationFill size={20} />, label: "Pricing Database" },
+  { icon: <PiNotificationFill size={20} />, label: "Clients" },
+  { icon: <PiNotificationFill size={20} />, label: "Team" },
+  {
+    icon: <TbBrandGoogleAnalytics size={20} />,
+    label: "Analytics",
+    section: "YOUR TOOLS",
+  },
+  { icon: <IoSettingsOutline size={20} />, label: "Settings" },
+];
 export const Sidebar: React.FC<SidebarProps> = ({
   toggleSidebar,
   isSidebarOpen,
 }) => {
-  interface SidebarItem {
-    icon: React.ReactNode;
-    label: string;
-    isActive?: boolean;
-    section?: string;
-  }
-  // Sidebar items
-  const sidebarItems: SidebarItem[] = [
-    { icon: <RxDashboard size={20} />, label: "Dashboard" },
-    { icon: <LuBriefcaseBusiness size={20} />, label: "Projects" },
-    { icon: <PiNotificationFill size={20} />, label: "Takeoffs" },
-    { icon: <PiNotificationFill size={20} />, label: "Estimates" },
-    { icon: <PiNotificationFill size={20} />, label: "Proposals" },
-    { icon: <PiNotificationFill size={20} />, label: "Templates" },
-    { icon: <PiNotificationFill size={20} />, label: "Pricing Database" },
-    { icon: <PiNotificationFill size={20} />, label: "Clients" },
-    { icon: <PiNotificationFill size={20} />, label: "Team" },
-    {
-      icon: <TbBrandGoogleAnalytics size={20} />,
-      label: "Analytics",
-      section: "YOUR TOOLS",
-    },
-    { icon: <IoSettingsOutline size={20} />, label: "Settings" },
-  ];
+  const { theme } = useSession();
+  console.log("theme123", theme);
   return (
     <>
       <div
         className={`
-        fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out bg-semi_blue
+        fixed inset-y-0 left-0 z-50  overflow-auto w-64 transform transition-transform duration-300 ease-in-out bg-semi_blue
          dark:bg-semi-dark
         lg:translate-x-0 lg:static lg:inset-0
         ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
@@ -51,12 +55,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
       `}
       >
         <div className="flex items-center justify-between p-4 ">
-          <Image src={Icons?.darkAuthLogo} className="h-auto w-auto" />
+          <Logo />
           <button
             onClick={toggleSidebar}
             className="lg:hidden p-2 rounded-md hover:bg-slate-700"
           >
-            <X size={20} />
+            <X size={20} className="text-dark dark:text-white" />
           </button>
         </div>
 

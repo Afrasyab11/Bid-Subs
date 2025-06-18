@@ -9,8 +9,8 @@ import {
 import Image from "@/common/image/Image";
 import { Icons } from "@/assets/Index";
 import { useState } from "react";
-import { ProjectUploadModal } from "@/common/Model/UploadFileModel";
 import Button from "@/common/Button";
+import { ProjectUploadModalTwo } from "@/common/Model/UploadFileTwo";
 // TypeScript interfaces
 interface StatsCard {
   title: string;
@@ -92,7 +92,6 @@ const Dashboard: React.FC = () => {
             </p>
           </div>
           <Button
- 
             label=""
             onClick={() => setIsModalOpen(true)}
             className="bg-blue w-fit text-white max-w-sm max-h-10 px-4 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
@@ -211,10 +210,13 @@ const Dashboard: React.FC = () => {
           </button>
         </div>
       </main>
-      <ProjectUploadModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+
+      {isModalOpen && (
+        <ProjectUploadModalTwo
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
       {/* </div> */}
     </>
   );
