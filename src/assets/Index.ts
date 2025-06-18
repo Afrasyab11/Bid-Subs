@@ -42,19 +42,22 @@ import youtube from "./LandingImages/SVGs/youtube.svg";
 import tiktok from "./LandingImages/SVGs/tiktok.svg";
 import phone from "./LandingImages/SVGs/phone.svg";
 import emailWhite from "./LandingImages/SVGs/EmailWhite.svg";
-import joincommunity from "./LandingImages/SVGs/joinCommunity.svg"
-import joinEllips from "./LandingImages/SVGs/joinEllipse.svg"
-import joinOverly from "./LandingImages/PNGs/joinOverly.png"
-import aiDrivenLight from "./LandingImages/SVGs/aiDrivenLight.svg"
-import howWorksLight from "./LandingImages/SVGs/howWorksLight.svg"
-import hero175 from "./LandingImages/SVGs/hero175.svg"
-import hero59772 from "./LandingImages/SVGs/hero59772.svg"
-import heroDashboard from "./LandingImages/SVGs/heroDashboard.svg"
-import heroDashboardLight from "./LandingImages/SVGs/heroDashboardLight.svg"
-import heroDashboardVecotorLight from "./LandingImages/SVGs/heroDashboardVectorLight.svg"
-import heroGradient from "./LandingImages/SVGs/heroGradient.svg"
+import joincommunity from "./LandingImages/SVGs/joinCommunity.svg";
+import joinEllips from "./LandingImages/SVGs/joinEllipse.svg";
+import joinOverly from "./LandingImages/PNGs/joinOverly.png";
+import aiDrivenLight from "./LandingImages/SVGs/aiDrivenLight.svg";
+import howWorksLight from "./LandingImages/SVGs/howWorksLight.svg";
+import hero175 from "./LandingImages/SVGs/hero175.svg";
+import hero59772 from "./LandingImages/SVGs/hero59772.svg";
+import heroDashboard from "./LandingImages/SVGs/heroDashboard.svg";
+import heroDashboardLight from "./LandingImages/SVGs/heroDashboardLight.svg";
+import heroDashboardVecotorLight from "./LandingImages/SVGs/heroDashboardVectorLight.svg";
+import heroGradient from "./LandingImages/SVGs/heroGradient.svg";
 import darkAuthLogo from "./LandingImages/SVGs/darkAuthLogo.svg";
-import whiteAuthLogo from "./LandingImages/SVGs/whiteAuthLogo.svg"
+import whiteAuthLogo from "./LandingImages/SVGs/whiteAuthLogo.svg";
+import profilePicture from "./LandingImages/PNGs/profilePicture.png";
+import blueBlur from "./LandingImages/PNGs/heroBottomBlur.png";
+import lightLogo from "./LandingImages/PNGs/lightLogo.png";
 export const Icons = {
   whiteAuthLogo,
   darkAuthLogo,
@@ -113,4 +116,7 @@ export const Icons = {
   WinRate,
   HowItWorks,
   Ellipse,
+  profilePicture,
+  blueBlur,
+  lightLogo,
 };

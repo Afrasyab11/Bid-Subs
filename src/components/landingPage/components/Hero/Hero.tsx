@@ -63,11 +63,17 @@ const Hero = () => {
         </div>
       </div>
       <div className="relative ">
-        {/* <Image src={Vector} alt="" className="absolute w-full bottom-0 " /> */}
         <Image
           src={theme === "light" ? Icons?.heroDashboardLight : dashboardImg}
           alt="Dashboard Preview"
           className="mt-16 h-full"
+        />
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-[240px] z-50 overflow-hidden">
+        <img
+          src={Icons.blueBlur}
+          alt=""
+          className="w-full h-full object-cover blur-[2px]"
         />
       </div>
     </div>
