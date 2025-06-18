@@ -54,6 +54,7 @@ import heroDashboardLight from "./LandingImages/SVGs/heroDashboardLight.svg";
 import heroDashboardVecotorLight from "./LandingImages/SVGs/heroDashboardVectorLight.svg";
 import heroGradient from "./LandingImages/SVGs/heroGradient.svg";
 import darkAuthLogo from "./LandingImages/SVGs/darkAuthLogo.svg";
+import whiteLogo from "./LandingImages/PNGs/whiteLogo.png";
 import whiteAuthLogo from "./LandingImages/SVGs/whiteAuthLogo.svg";
 import profilePicture from "./LandingImages/PNGs/profilePicture.png";
 import blueBlur from "./LandingImages/PNGs/heroBottomBlur.png";
