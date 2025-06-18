@@ -38,3 +38,12 @@ body {
   border-image-slice: 1; /* required to make border-image work */
 }
 
+/* Add this to your global CSS or Tailwind config file */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, and Opera */
+}
