@@ -17,19 +17,21 @@ export const Landing = () => {
       <Header />
       <Hero />
       <div className="px-2 flex flex-col items-center justify-center sm:gap-y-16 md:gap-y-24">
-        <div className="w-full md:w-[90%] mx-auto">
+        <div className="w-full flex flex-col sm:gap-y-16 md:gap-y-24 md:w-[90%] mx-auto">
           <BuiltForBuilders />
           <WhyManualEstimating />
         </div>
         <AiDriven />
-        <div className="w-full md:w-[90%] mx-auto">
+        <div className="w-full md:w-[90%] flex flex-col mx-auto sm:gap-y-16 md:gap-y-24">
           <SpeedAccuracyProfit />
           <HowItWorks />
         </div>
-        <FAQs />
-        <PricingPlans />
-        <Testimonials />
-        <JoinOurCommunity />
+        <div className="w-full flex flex-col sm:gap-y-16 md:gap-y-24">
+          <FAQs />
+          <PricingPlans />
+          <Testimonials />
+          <JoinOurCommunity />
+        </div>
       </div>
       <div className="mt-24">
         <Footer />

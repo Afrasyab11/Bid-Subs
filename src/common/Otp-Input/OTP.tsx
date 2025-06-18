@@ -109,7 +109,7 @@ export const OTPInput: React.FC<OTPInputProps> = ({
             onPaste={handlePaste}
             onFocus={() => setActiveOTPIndex(index)}
             className={`
-                w-14 h-14 bg-slate-800 border-2 rounded-lg text-center text-xl font-semibold text-white
+              sm:w-10 sm:h-10  md:w-14 md:h-14 bg-slate-800 border-2 rounded-lg text-center text-xl font-semibold text-white
                 transition-all duration-200 outline-none
                 ${
                   activeOTPIndex === index

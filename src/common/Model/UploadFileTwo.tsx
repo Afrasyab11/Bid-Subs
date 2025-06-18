@@ -136,7 +136,7 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
         // Removed overflow-y-auto and max-height constraints
       >
         {/* Header with Steps */}
-        <div className="flex items-center gap-x-6 p-6 w-full border-b border-slate-700">
+        <div className="flex items-center gap-x-6 sm:px-0 md:p-6 w-full border-b border-slate-700">
           <div className="flex items-center space-x-8 w-full">
             {currentStep > 1 && (
               <button
@@ -182,7 +182,7 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6">
+        <div className="sm:px-0 sm:py-6 md:p-6 space-y-6">
           {currentStep === 1 && (
             <>
               <div>
@@ -284,16 +284,16 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
 
         {/* Footer */}
         {currentStep === 1 && (
-          <div className="flex justify-end space-x-4 p-6">
+          <div className="w-full flex items-center sm:justify-center sm:flex-col gap-y-3 md:flex-row md:justify-end space-x-4 p-6">
             <Button
               onClick={onClose}
               label="Cancel"
-              className="py-2 px-4 max-w-[80px] bg-blue/10 text-blue dark:text-white rounded-md"
+              className="py-2 px-4 sm:order-2 md:order-1 max-w-[80px] bg-blue/10 text-blue dark:text-white rounded-md"
             />
             <Button
               onClick={handleNext}
               label="Upload Project"
-              className="bg-blue max-w-[160px] text-white px-6 py-2 rounded-lg"
+              className="bg-blue sm:w-full md:w-fit sm:order-1 md:order-2 max-w-[160px] text-white px-6 py-2 rounded-lg"
             />
           </div>
         )}
