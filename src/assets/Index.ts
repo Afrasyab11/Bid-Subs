@@ -58,7 +58,9 @@ import whiteLogo from "./LandingImages/PNGs/whiteLogo.png";
 import whiteAuthLogo from "./LandingImages/SVGs/whiteAuthLogo.svg";
 import profilePicture from "./LandingImages/PNGs/profilePicture.png";
 import blueBlur from "./LandingImages/PNGs/heroBottomBlur.png";
+import lightBlue from "./LandingImages/PNGs/lightmodeHeroBottom.png";
 import lightLogo from "./LandingImages/PNGs/lightLogo.png";
+
 export const Icons = {
   whiteAuthLogo,
   darkAuthLogo,
@@ -121,4 +123,5 @@ export const Icons = {
   profilePicture,
   blueBlur,
   lightLogo,
+  lightBlue,
 };

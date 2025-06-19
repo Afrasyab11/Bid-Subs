@@ -70,7 +70,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-[240px] z-50 overflow-hidden">
         <img
-          src={Icons.blueBlur}
+          src={theme === "light" ? Icons?.lightBlue : Icons.blueBlur}
           alt=""
           className="w-full h-full object-cover blur-[2px]"
         />
