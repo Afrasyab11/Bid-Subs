@@ -9,12 +9,11 @@ import Image from "@/common/image/Image";
 import { useSession } from "@/sessionManager/SessionContext";
 import { Icons } from "@/assets/Index";
 const Herocontent = {
-  heading:
-    "Supercharge your estimates with AI – win more bids in half the time.",
+  heading: "Supercharge estimating with AI– win more jobs in half the time",
   paragraph:
-    "BidSubs is an AI-powered estimating platform built for subcontractors. Upload your plans and let our AI instantly quantify materials, apply real-time pricing, and generate a complete bid – all in seconds instead of days.",
-  startFreeTrail: "Start Your Free Trial",
+    "Bidsubs is an AI-Powered platform built for construction teams. Upload your plans and let our AI instantly verify bids against project documents—ensuring alignment with scopes, drawings, and RFPs before making award decisions.",
   bookDemo: "Book a Demo",
+  startFreeTrail: "Start Your Free Trial",
 };
 
 const Hero = () => {
@@ -38,7 +37,7 @@ const Hero = () => {
           className="absolute w-full h-auto bottom-0   z-10"
         />
       )}
-      <div className="w-full max-w-3xl z-10 mt-20">
+      <div className="w-full max-w-4xl z-10 mt-20">
         <MainHeading
           classname="text-center text-6xl "
           heading={Herocontent.heading}

@@ -7,21 +7,24 @@ export const AiDriven: React.FC = () => {
   const { theme } = useSession();
   const features = [
     {
-      title: "Automatic Takeoff:",
-      description: "Scans drawings and extracts quantities instantly.",
-    },
-    {
-      title: "Dynamic Pricing:",
-      description: "Pulls up-to-date supplier costs to keep bids competitive.",
-    },
-    {
-      title: "Bid Templates:",
-      description: "Generates organized proposals ready to send to clients.",
-    },
-    {
-      title: "Collaboration:",
+      title: "Bid Verification Engine:",
       description:
-        "Easy sharing with team members and clients (e.g. PDF export, cloud storage).",
+        " Automatically verify bid line items against your drawings, specs, and RFPs to ensure nothing’s missed—and nothing extra is added.",
+    },
+    {
+      title: "AI-Powered Comparisons:",
+      description:
+        " Quickly compare bids from multiple firms with smart detection of scope gaps, exclusions, and inconsistencies.",
+    },
+    {
+      title: "Scope Alignment:",
+      description:
+        "Get instant visibility into whether a bid actually covers the work - and how it stacks up against others.",
+    },
+    {
+      title: " Document Uploads Made Simple:",
+      description:
+        "Upload drawings, RFPs, and scope documents. Our system reads and structures the data for you.",
     },
   ];
 

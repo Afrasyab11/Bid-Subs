@@ -6,7 +6,7 @@ export const faqData: FAQItem[] = [
     id: 1,
     question: "What is BidSubs?",
     answer:
-      "BidSubs is an AI-powered estimating platform built for subcontractors. Upload your plans, and our system automatically generates accurate takeoffs, cost estimates, and professional proposals—in minutes, not hours.",
+      "BidSubs is an AI-powered estimating platform built for construction. Upload your plans, and our system automatically generates accurate takeoffs, cost estimates, and professional proposals—in minutes, not hours.",
   },
   {
     id: 2,

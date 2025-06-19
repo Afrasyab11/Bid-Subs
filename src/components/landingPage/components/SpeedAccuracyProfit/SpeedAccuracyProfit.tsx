@@ -38,14 +38,22 @@ export const SpeedAccuracyProfit = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12  mt-8">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <img src={feature.image} alt={feature.title} className=" " />
-            <h3 className="text-lg font-medium mb-2 text-gray dark:text-white">{feature.title}</h3>
-            <p className="text-md text-gray dark:text-[#FDFFF7E5]">{feature.description}</p>
+          <div
+            key={index}
+            className="flex flex-col items-center text-center relative"
+          >
+            <img src={feature.image} alt={feature.title} />
+            <div className="absolute -bottom-3">
+              <h3 className="text-lg font-medium text-gray dark:text-white">
+                {feature.title}
+              </h3>
+              <p className="text-md text-gray dark:text-[#FDFFF7E5]">
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
 };
-
