@@ -12,7 +12,7 @@ const Logo = () => {
 
   return (
     <Image
-      src={theme === "dark" ? Icons.darkAuthLogo : Icons.whiteLogo}
+      src={theme === "dark" ? Icons?.darkAuthLogo : Icons?.whiteLogo}
       alt="Logo"
       className="h-auto w-auto"
     />
