@@ -1,5 +1,6 @@
 // import { Icons } from "@/assets/Index";
 import { Icons } from "@/assets/Index";
+import Image from "@/common/image/Image";
 import MainHeading from "@/common/MainHeading";
 
 const features = [
@@ -36,14 +37,15 @@ export const SpeedAccuracyProfit = () => {
         subheading="  Everything you need to win more jobs"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12  mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12  mt-16">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center relative"
+            className="flex flex-col items-center justify-center text-center relative"
           >
-            <img src={feature.image} alt={feature.title} />
-            <div className="absolute -bottom-3">
+            <Image src={feature.image} alt={feature.title} className="h-auto w-auto z-10 " />
+            {/* <div className="dark:bg-semi-dark rounded-full absolute top-20 z-0 h-12 w-40"></div> */}
+            <div className="min-h-[100px] mt-6 z-10">
               <h3 className="text-lg font-medium text-gray dark:text-white">
                 {feature.title}
               </h3>
