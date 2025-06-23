@@ -8,30 +8,33 @@ const config: Config = {
     "./src/common/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/projects/**/*.{js,ts,jsx,tsx,mdx}",
+    "./*",
   ],
   theme: {
     extend: {
-      screens:{
-        sm:"320px",
+      screens: {
+        sm: "320px",
       },
       colors: {
-        blue: "#1350E5",
+        primary: "#1350E5",
         semi_blue: "#E8ECF4",
         light_dark: "#1C1E1C",
-        gray: "#676D75",
+        secondary: "#676D75",
         "blue-light": "rgba(19, 80, 229, 0.1)",
         dark: "#0B1423",
         "semi-dark": "#0F1C32",
-        grayDark: "#666666",
+        zincDark: "#666666",
         semi_light: "#F7F8F9",
         navy_blue: "#0E1B30",
         navy_light: "#141D2F",
         light: "rgba(19, 80, 229, 0.1)",
         "semi-gray": "#25252566",
-        "mid-gray":"#9A9EA6"
+        "mid-gray": "#9A9EA6",
       },
-        backgroundImage: {
-        'join-community-bg-gradient': 'linear-gradient(270deg, #0F1C32 0%, #0C182B 100%)',
+      backgroundImage: {
+        "join-community-bg-gradient":
+          "linear-gradient(270deg, #0F1C32 0%, #0C182B 100%)",
       },
     },
   },
@@ -44,9 +47,9 @@ const config: Config = {
             "linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(102, 102, 102, 0.05))",
           borderImageSlice: "1",
         },
-         '.table-glass-border': {
-          borderImageSlice: '1',
-          backdropFilter: 'blur(12px)', // Glassmorphism blur
+        ".table-glass-border": {
+          borderImageSlice: "1",
+          backdropFilter: "blur(12px)", // Glassmorphism blur
         },
       });
     }),

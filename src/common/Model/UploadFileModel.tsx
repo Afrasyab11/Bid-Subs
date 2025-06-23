@@ -111,7 +111,7 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
             {currentStep > 1 && (
               <button
                 onClick={handleBack}
-                className="text-gray dark:text-white transition-colors"
+                className="text-secondary dark:text-white transition-colors"
               >
                 <ArrowLeft size={20} />
               </button>
@@ -126,7 +126,7 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                     onClick={handleNext}
                     className={`w-8 h-8 rounded-full flex items-center cursor-pointer flex-col justify-center text-sm font-medium ${
                       step === currentStep
-                        ? "bg-blue text-white dark:text-white"
+                        ? "bg-primary text-white dark:text-white"
                         : step < currentStep
                         ? "bg-gray dark:bg-navy_light text-white"
                         : "bg-gray dark:bg-navy_light text-white"
@@ -180,10 +180,10 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                   className=" rounded-lg p-12 text-center bg-semi_blue dark:bg-navy_light   cursor-pointer"
                   onClick={() => fileInputRef.current?.click()}
                 >
-                  <Upload size={48} className="mx-auto text-gray mb-4" />
-                  <p className="text-gray mb-2">Drag and drop files</p>
-                  <p className="text-gray text-sm mb-4">.pdf, .dwg, .zip</p>
-                  <button className="bg-blue dark:bg-white text-white dark:text-dark px-6 py-2 rounded-lg font-medium  ">
+                  <Upload size={48} className="mx-auto text-secondary mb-4" />
+                  <p className="text-secondary mb-2">Drag and drop files</p>
+                  <p className="text-secondary text-sm mb-4">.pdf, .dwg, .zip</p>
+                  <button className="bg-primary dark:bg-white text-white dark:text-dark px-6 py-2 rounded-lg font-medium  ">
                     Select files
                   </button>
                   <input
@@ -218,11 +218,11 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                   key={trade.id}
                   onClick={() => handleTradeSelect(trade.id)}
                   className={`flex flex-col items-center p-4 rounded-lg transition-colors ${
-                    selectedTrade === trade.id ? " text-blue " : " text-blue "
+                    selectedTrade === trade.id ? " text-primary " : " text-primary "
                   }`}
                 >
                   <IoFolder size={50} className="mb-2" />
-                  <span className="text-sm font-medium text-blue dark:text-white">
+                  <span className="text-sm font-medium text-primary dark:text-white">
                     {trade.name}
                   </span>
                 </button>
@@ -239,13 +239,13 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
                     onClick={() => handleBidToggle(bid.id)}
                     className={`flex flex-col items-center p-2 rounded-lg transition-colors ${
                       selectedBids.includes(bid.id)
-                        ? "bg-blue text-white "
-                        : "bg-blue/10  dark:bg-navy_blue text-blue dark:text-blue "
+                        ? "bg-primary text-white "
+                        : "bg-primary/10  dark:bg-navy_blue text-primary dark:text-primary "
                     }`}
                   >
                     <FileText size={50} className="mb-2" />
                   </button>
-                  <span className="text-sm  mt-3 font-medium text-blue dark:text-white">
+                  <span className="text-sm  mt-3 font-medium text-primary dark:text-white">
                     {bid.name}
                   </span>
                 </div>
@@ -260,13 +260,13 @@ export const ProjectUploadModal: React.FC<ProjectUploadModalProps> = ({
             <Button
               onClick={onClose}
               label="Cancel"
-              className="py-2  dark:text-white transition-colors px-4 rounded-md max-w-[80px] bg-blue/10 text-blue dark:bg-[#1350E51A]/10"
+              className="py-2  dark:text-white transition-colors px-4 rounded-md max-w-[80px] bg-primary/10 text-primary dark:bg-[#1350E51A]/10"
             />
             {currentStep < 3 && (
               <Button
                 onClick={handleNext}
                 label="Upload Project"
-                className="bg-blue max-w-[160px] text-white px-6 py-2 rounded-lg  transition-colors"
+                className="bg-primary max-w-[160px] text-white px-6 py-2 rounded-lg  transition-colors"
               />
             )}
           </div>

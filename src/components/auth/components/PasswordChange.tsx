@@ -12,16 +12,16 @@ export const PasswordChange = () => {
           <div className="w-full flex flex-col items-center justify-center gap-y-2 mt-4 mb-7 ">
             <p className="text-semi-dark dark:text-white text-xl font-semibold">Password Changed</p>
           </div>
-          <div className="bg-blue rounded-full w-auto max-w-16 max-h-16 flex items-center justify-center p-3">
+          <div className="bg-primary rounded-full w-auto max-w-16 max-h-16 flex items-center justify-center p-3">
             <Image src={Icons?.check} className="h-14 w-14 " />
           </div>
-          <p className="text-gray text-sm">
+          <p className="text-secondary text-sm">
             Your password changed successfully
           </p>
           <Link  to={ROUTES_ENUM?.DASHBOARD} className="w-full">
             <Button
               label="Confirm"
-              className="bg-blue w-full text-white rounded-lg mt-4 "
+              className="bg-primary w-full text-white rounded-lg mt-4 "
             />
           </Link>
         </div>

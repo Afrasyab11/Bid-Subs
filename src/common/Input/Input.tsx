@@ -113,7 +113,7 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
               type="button"
               onClick={togglePasswordVisibility}
               disabled={disabled}
-              className="flex items-center justify-center px-4 text-blue hover:text-blue transition-colors"
+              className="flex items-center justify-center px-4 text-primary hover:text-primary transition-colors"
               tabIndex={-1}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}

@@ -46,7 +46,7 @@ export const LoginAndSignUp = () => {
           <p className="text-semi-dark dark:text-white text-xl font-semibold">
             {activeTab === 0 ? "Sign in to your account" : "Create your account"}
           </p>
-          <p className="text-gray dark:text-white text-sm">
+          <p className="text-secondary dark:text-white text-sm">
             {activeTab === 0 ? "Welcome back! Please enter your details" : "Please enter your details"}
           </p>
         </div>

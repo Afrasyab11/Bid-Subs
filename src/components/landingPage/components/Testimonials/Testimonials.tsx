@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
       <span
         key={index}
         className={`text-md ${
-          index < rating ? "text-orange-500 dark:text-blue" : "text-slate-600"
+          index < rating ? "text-orange-500 dark:text-primary" : "text-slate-600"
         }`}
       >
         ★
@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
             heading="Real Experiences from Real People"
             subheading=""
           />
-          <p className="text-gray dark:text-white font-normal text-[17px]">
+          <p className="text-secondary dark:text-white font-normal text-[17px]">
             Trusted by subcontractors who bid smarter, faster, and win more.
           </p>
         </div>
@@ -47,7 +47,7 @@ const Testimonials: React.FC = () => {
             ref={prevRef}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors cursor-pointer"
+            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-primary dark:text-slate-400 hover:text-white transition-colors cursor-pointer"
           >
             <FiChevronLeft className="w-5 h-5" />
           </motion.button>
@@ -55,7 +55,7 @@ const Testimonials: React.FC = () => {
             ref={nextRef}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-blue dark:text-slate-400 hover:text-white transition-colors"
+            className="w-10 h-10 bg-transparent dark:bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-full flex items-center justify-center text-primary dark:text-slate-400 hover:text-white transition-colors"
           >
             <FiChevronRight className="w-5 h-5 " />
           </motion.button>
@@ -143,7 +143,7 @@ const Testimonials: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray dark:text-slate-300 text-md leading-relaxed">
+              <p className="text-secondary dark:text-slate-300 text-md leading-relaxed">
                 {testimonial.text}
               </p>
             </motion.div>

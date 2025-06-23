@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Landing } from "./components/landingPage/LandingComp";
 import Dashboard from "./components/dashboard/Dashboard";
+import Projects from "./components/projects/Projects";
 import { DashboardLayout } from "./layout/DashboardLayout";
 import { ROUTES_ENUM } from "./constants/routes.constant";
 import { AuthLayout } from "./layout/AuthLayout";
@@ -11,6 +12,12 @@ import { CreatePassword } from "./components/auth/components/CreatePassword";
 import { PasswordChange } from "./components/auth/components/PasswordChange";
 import { LoginAndSignUp } from "./components/auth/components/LoginAndSignUpLayout";
 import { SessionProvider } from "./sessionManager/SessionContext";
+import Trades from "./components/trades/Trades";
+import Bids from "./components/bids/Bids";
+import BidDetails from "./components/bids/BidDetails";
+import BidComparison from "./components/bids/BidComparison";
+import Files from "./components/files/Files";
+
 function App() {
   return (
     <>
@@ -37,6 +44,12 @@ function App() {
             </Route>
             <Route path={"/"} element={<DashboardLayout />}>
               <Route path={ROUTES_ENUM.DASHBOARD} element={<Dashboard />} />
+              <Route path={ROUTES_ENUM.PROJECTS} element={<Projects />} /> 
+              <Route path={ROUTES_ENUM.TRADES} element={<Trades />} />
+              <Route path={`${ROUTES_ENUM.BIDS}/:tradeId`} element={<Bids />} />
+              <Route path={`${ROUTES_ENUM.BID_DETAILS}/:tradeId/:bidId`} element={<BidDetails />} />
+              <Route path={ROUTES_ENUM.BID_COMPARISON} element={<BidComparison />} />
+              <Route path={ROUTES_ENUM.FILES} element={<Files />} />
             </Route>
           </Routes>
         </SessionProvider>

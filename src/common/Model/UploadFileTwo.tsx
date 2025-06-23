@@ -141,7 +141,7 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
             {currentStep > 1 && (
               <button
                 onClick={handleBack}
-                className="text-gray dark:text-white transition-colors"
+                className="text-secondary dark:text-white transition-colors"
               >
                 <ArrowLeft size={20} />
               </button>
@@ -156,7 +156,7 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
                     onClick={handleNext}
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium cursor-pointer ${
                       step === currentStep
-                        ? "bg-blue text-white"
+                        ? "bg-primary text-white"
                         : "bg-gray dark:bg-navy_light text-white"
                     }`}
                   >
@@ -208,10 +208,10 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
                   onDrop={handleDrop}
                   className="rounded-lg p-12 text-center bg-semi_blue dark:bg-navy_light cursor-pointer"
                 >
-                  <Upload size={48} className="mx-auto text-gray mb-4" />
-                  <p className="text-gray mb-2">Drag and drop files</p>
-                  <p className="text-gray text-sm mb-4">.pdf, .dwg, .zip</p>
-                  <button className="bg-blue dark:bg-white text-white dark:text-dark px-6 py-2 rounded-lg font-medium">
+                  <Upload size={48} className="mx-auto text-secondary mb-4" />
+                  <p className="text-secondary mb-2">Drag and drop files</p>
+                  <p className="text-secondary text-sm mb-4">.pdf, .dwg, .zip</p>
+                  <button className="bg-primary dark:bg-white text-white dark:text-dark px-6 py-2 rounded-lg font-medium">
                     Select files
                   </button>
                   <input
@@ -244,7 +244,7 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
                   key={trade.id}
                   onClick={() => handleTradeSelect(trade.id)}
                   className={`flex flex-col items-center p-4 rounded-lg transition-colors ${
-                    selectedTrade === trade.id ? "text-blue" : "text-blue"
+                    selectedTrade === trade.id ? "text-primary" : "text-primary"
                   }`}
                 >
                   <IoFolder size={50} className="mb-2" />
@@ -267,8 +267,8 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
                     onClick={() => handleBidToggle(bid.id)}
                     className={`flex flex-col items-center p-2 rounded-lg transition-colors ${
                       selectedBids.includes(bid.id)
-                        ? "bg-blue text-white"
-                        : "bg-blue/10 dark:bg-navy_blue text-blue dark:text-blue"
+                        ? "bg-primary text-white"
+                        : "bg-primary/10 dark:bg-navy_blue text-primary dark:text-primary"
                     }`}
                   >
                     <FileText size={50} className="mb-2" />
@@ -288,12 +288,12 @@ export const ProjectUploadModalTwo: React.FC<ProjectUploadModalProps> = ({
             <Button
               onClick={onClose}
               label="Cancel"
-              className="py-2 px-4 sm:order-2 md:order-1 max-w-[80px] bg-blue/10 text-blue dark:text-white rounded-md"
+              className="py-2 px-4 sm:order-2 md:order-1 max-w-[80px] bg-primary/10 text-primary dark:text-white rounded-md"
             />
             <Button
               onClick={handleNext}
               label="Upload Project"
-              className="bg-blue sm:w-full md:w-fit sm:order-1 md:order-2 max-w-[160px] text-white px-6 py-2 rounded-lg"
+              className="bg-primary sm:w-full md:w-fit sm:order-1 md:order-2 max-w-[160px] text-white px-6 py-2 rounded-lg"
             />
           </div>
         )}

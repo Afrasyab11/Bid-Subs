@@ -42,20 +42,20 @@ const Hero = () => {
           classname="text-center text-6xl "
           heading={Herocontent.heading}
         />
-        <p className="text-gray dark:text-white my-6 text-xl sm:text-[15px] md:text-base sm:text-justify md:text-center">
+        <p className="text-secondary dark:text-white my-6 text-xl sm:text-[15px] md:text-base sm:text-justify md:text-center">
           {Herocontent.paragraph}
         </p>
 
         <div className="flex justify-center items-center gap-4 sm:flex-col md:flex-row">
           <Link
             to={ROUTES_ENUM.LOGIN}
-            className="rounded-4xl bg-blue rounded-full py-3 text-white px-8"
+            className="rounded-4xl bg-primary rounded-full py-3 text-white px-8"
           >
             {Herocontent.startFreeTrail}
           </Link>
           <Link
             to={ROUTES_ENUM.DASHBOARD}
-            className="rounded-4xl bg-transparent border rounded-full py-3 border-blue  text-blue dark:text-white px-8"
+            className="rounded-4xl bg-transparent border rounded-full py-3 border-blue  text-primary dark:text-white px-8"
           >
             {Herocontent.bookDemo}
           </Link>

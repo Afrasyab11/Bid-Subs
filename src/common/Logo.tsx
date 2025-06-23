@@ -1,7 +1,6 @@
-import Image from "./image/Image";
 import { useEffect, useState } from "react";
-import { Icons } from "@/assets/Index";
 import { useSession } from "@/sessionManager/SessionContext";
+import { CheckCircle } from "lucide-react";
 const Logo = () => {
   const { theme } = useSession();
   const [mounted, setMounted] = useState(false);
@@ -11,11 +10,10 @@ const Logo = () => {
   if (!mounted) return null;
 
   return (
-    <Image
-      src={theme === "dark" ? Icons?.darkAuthLogo : Icons?.whiteLogo}
-      alt="Logo"
-      className="h-auto w-auto"
-    />
+   <div className="flex items-center gap-2">
+   <CheckCircle className="size-8 dark:text-white text-neutral-900" />
+   <span className="text-3xl font-bold dark:text-white text-neutral-900">BidSubs</span>
+    </div>
   );
 };
 

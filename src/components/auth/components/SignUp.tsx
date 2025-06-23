@@ -47,7 +47,7 @@ export const Signup = () => {
         </div>
         <Button
           label="Sign up"
-          className="bg-blue w-full text-white rounded-lg mt-2 mb-4"
+          className="bg-primary w-full text-white rounded-lg mt-2 mb-4"
         />
       </div>
     </>

@@ -89,7 +89,7 @@ export const OTPInput: React.FC<OTPInputProps> = ({
         <p className="text-semi-dark dark:text-white text-xl font-semibold">
           OTP Code
         </p>
-        <p className=" text-sm text-gray">
+        <p className=" text-sm text-secondary">
           Type the code we have sent you on your registered email
         </p>
       </div>
@@ -131,8 +131,8 @@ export const OTPInput: React.FC<OTPInputProps> = ({
           onClick={()=>handleSubmit()}
           className={` w-full text-white rounded-lg mt-4  ${
             isComplete
-              ? "bg-blue text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
-              : "bg-slate-700 text-gray-400 cursor-not-allowed"
+              ? "bg-primary text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+              : "bg-slate-700 text-secondary-400 cursor-not-allowed"
           }`}
           disabled={!isComplete}
         />
@@ -143,7 +143,7 @@ export const OTPInput: React.FC<OTPInputProps> = ({
           Code can be resend in 00:35
         </p>
       </div>
-      <Button label="Send" className="text-gray bg-transparent" />
+      <Button label="Send" className="text-secondary bg-transparent" />
     </div>
   );
 };

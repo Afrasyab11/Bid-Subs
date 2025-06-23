@@ -18,11 +18,11 @@ const FAQs: React.FC = () => {
       <div className="flex sm:flex-col sm:items-center gap-y-3 md:flex-row md:justify-between items-start mb-12">
         <div>
           <MainHeading heading="Everything You Need to Know" classname="text-center" subheading="" />
-          <p className="text-gray dark:text-white font-medium text-[15px] md:text-[20px] text-start">
+          <p className="text-secondary dark:text-white font-medium text-[15px] md:text-[20px] text-start">
             Got questions? We've got answers
           </p>
         </div>
-        <Button text="Try Now" path="/" classname="rounded-lg !bg-blue" />
+        <Button text="Try Now" path="/" classname="rounded-lg !bg-primary" />
       </div>
 
       {/* FAQ Items */}
@@ -38,9 +38,9 @@ const FAQs: React.FC = () => {
               </span>
               <div className="flex-shrink-0">
                 {openItem === item.id ? (
-                  <FiMinus className="w-5 h-5 text-blue dark:text-slate-400" />
+                  <FiMinus className="w-5 h-5 text-primary dark:text-slate-400" />
                 ) : (
-                  <FiPlus className="w-5 h-5 text-blue dark;text-slate-400" />
+                  <FiPlus className="w-5 h-5 text-primary dark;text-slate-400" />
                 )}
               </div>
             </button>
@@ -56,7 +56,7 @@ const FAQs: React.FC = () => {
                   className="overflow-hidden"
                 >
                   <div className="pb-6 px-0">
-                    <p className="text-gray dark:text-slate-300 text-base leading-relaxed sm:w-full sm:text-justify md:text-start md:w-[80%]">
+                    <p className="text-secondary dark:text-slate-300 text-base leading-relaxed sm:w-full sm:text-justify md:text-start md:w-[80%]">
                       {item.answer}
                     </p>
                   </div>

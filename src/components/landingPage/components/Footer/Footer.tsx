@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
                 />
                 <Button
                   label="Notify me"
-                  className="bg-white text-semi-dark dark:!bg-blue rounded-md px-4 py-3 max-w-[117px] dark:!text-white text-nowrap"
+                  className="bg-white text-semi-dark dark:!bg-primary rounded-md px-4 py-3 max-w-[117px] dark:!text-white text-nowrap"
                 />
               </div>
             </div>

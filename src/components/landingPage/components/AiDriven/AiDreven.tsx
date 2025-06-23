@@ -37,7 +37,7 @@ export const AiDriven: React.FC = () => {
             <br />
             Start to Finish
           </h1>
-          <p className="text-gray-400 text-lg mb-8">
+          <p className="text-secondary-400 text-lg mb-8">
             From Plans to Proposal in Minutes.
           </p>
         </div>
@@ -59,7 +59,7 @@ export const AiDriven: React.FC = () => {
         ))}
         <Button
           label="Try it Now - Free Demo"
-          className="!bg-blue text-white dark:!text-white rounded-full !px-3 py-3 gap-x-2 max-w-[276px]"
+          className="!bg-primary text-white dark:!text-white rounded-full !px-3 py-3 gap-x-2 max-w-[276px]"
         >
           {" "}
           <Image src={Icons?.tryNow} alt="Try now" className="h-6 w-6" />

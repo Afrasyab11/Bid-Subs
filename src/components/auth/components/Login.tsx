@@ -37,13 +37,13 @@ export const Login = () => {
             }}
           />
 
-          <label className="text-gray dark:text-white text-sm">
+          <label className="text-secondary dark:text-white text-sm">
             Remember me
           </label>
         </div>
         <Link
           to={ROUTES_ENUM?.RES_PASSWORD}
-          className="text-gray dark:text-white text-sm"
+          className="text-secondary dark:text-white text-sm"
         >
           Forgot Password?
         </Link>
@@ -51,7 +51,7 @@ export const Login = () => {
       <Link to={ROUTES_ENUM?.DASHBOARD} className="w-full">
         <Button
           label="Login"
-          className="bg-blue w-full text-white rounded-lg mt-4"
+          className="bg-primary w-full text-white rounded-lg mt-4"
         />
       </Link>
     </div>

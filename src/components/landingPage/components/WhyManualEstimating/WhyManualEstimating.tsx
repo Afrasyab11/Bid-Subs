@@ -85,7 +85,7 @@ const WhyManualEstimating = () => {
                   {item?.title}
                 </h3>
 
-                <p className="text-sm text-center  leading-relaxed text-gray dark:text-white">
+                <p className="text-sm text-center  leading-relaxed text-secondary dark:text-white">
                   {item?.description}
                 </p>
               </div>
@@ -98,7 +98,7 @@ const WhyManualEstimating = () => {
         <Button
           text={ThirdBoxContent.button}
           path=""
-          classname="rounded-full bg-transparent hover:bg-transparent dark:hover:bg-transparent !text-blue border-blue dark:bg-transparent border"
+          classname="rounded-full bg-transparent hover:bg-transparent dark:hover:bg-transparent !text-primary border-blue dark:bg-transparent border"
         />
       </div>
     </div>

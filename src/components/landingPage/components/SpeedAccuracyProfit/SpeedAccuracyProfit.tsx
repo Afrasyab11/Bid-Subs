@@ -46,10 +46,10 @@ export const SpeedAccuracyProfit = () => {
             <Image src={feature.image} alt={feature.title} className="h-auto w-auto z-10 " />
             {/* <div className="dark:bg-semi-dark rounded-full absolute top-20 z-0 h-12 w-40"></div> */}
             <div className="min-h-[100px] mt-6 z-10">
-              <h3 className="text-lg font-medium text-gray dark:text-white">
+              <h3 className="text-lg font-medium text-secondary dark:text-white">
                 {feature.title}
               </h3>
-              <p className="text-md text-gray dark:text-[#FDFFF7E5]">
+              <p className="text-md text-secondary dark:text-[#FDFFF7E5]">
                 {feature.description}
               </p>
             </div>

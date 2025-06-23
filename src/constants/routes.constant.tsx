@@ -6,4 +6,10 @@ export const ROUTES_ENUM = {
   OPT: "/otp",
   CRE_PASSWORD: "/createpassword",
   DASHBOARD: "/dashboard",
+  PROJECTS: "/projects",
+  TRADES: "/trades",
+  BIDS: "/bids",
+  BID_DETAILS: "/bid-details",
+  BID_COMPARISON: "/bid-comparison",
+  FILES: "/files",
 };

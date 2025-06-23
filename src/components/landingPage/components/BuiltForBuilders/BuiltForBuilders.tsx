@@ -15,7 +15,7 @@ happen"
         />
       </div>
 
-      <p className="text-center max-w-1/2 max-sm:w-full sm:text-justify md:text-center text-gray dark:text-white w-full max-w-4xl sm:px-2 md:p-0">
+      <p className="text-center max-w-1/2 max-sm:w-full sm:text-justify md:text-center text-secondary dark:text-white w-full max-w-4xl sm:px-2 md:p-0">
         Our AI-powered platform checks the fine print so you don’t have to—
         reducing risk, increasing accuracy, and saving you time.
       </p>

@@ -7,7 +7,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: zincscale;
 }
 
 body {
@@ -34,16 +34,20 @@ body {
 
 .gradient-border {
   border: 1px solid;
-  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(102, 102, 102, 0.05) 100%);
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(102, 102, 102, 0.05) 100%
+  );
   border-image-slice: 1; /* required to make border-image work */
 }
 
 /* Add this to your global CSS or Tailwind config file */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari, and Opera */
+  display: none; /* Chrome, Safari, and Opera */
 }

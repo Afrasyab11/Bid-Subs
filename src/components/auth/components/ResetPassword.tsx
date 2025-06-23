@@ -17,7 +17,7 @@ export const ResetPassword = () => {
             <p className="text-semi-dark dark:text-white text-xl font-semibold">
               Reset Password
             </p>
-            <p className="text-gray text-sm">
+            <p className="text-secondary text-sm">
               Type your registered email to reset your password
             </p>
           </div>
@@ -34,12 +34,12 @@ export const ResetPassword = () => {
           <Link to={ROUTES_ENUM?.OPT}>
             <Button
               label="Reset Password"
-              className="bg-blue w-full text-white rounded-lg mt-4 "
+              className="bg-primary w-full text-white rounded-lg mt-4 "
             />
           </Link>
           <div className="flex w-full justify-center gap-x-2 mt-4">
             <p className="text-semi-dark dark:text-white">Remember password?</p>
-            <Link to={ROUTES_ENUM?.LOGIN} className="text-blue">
+            <Link to={ROUTES_ENUM?.LOGIN} className="text-primary">
               Login now
             </Link>
           </div>

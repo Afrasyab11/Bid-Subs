@@ -18,7 +18,7 @@ export const CreatePassword = () => {
             <p className="text-semi-dark dark:text-white text-xl font-semibold">
               Create Password
             </p>
-            <p className="text-sm text-gray">Create new password</p>
+            <p className="text-sm text-secondary">Create new password</p>
           </div>
           <Input
             value={payload?.password}
@@ -43,12 +43,12 @@ export const CreatePassword = () => {
           <Link to={ROUTES_ENUM?.PASS_CHANGE}>
             <Button
               label="Create Password"
-              className="bg-blue w-full text-white rounded-lg mt-4 "
+              className="bg-primary w-full text-white rounded-lg mt-4 "
             />
           </Link>
           <div className="flex w-full justify-center gap-x-2 mt-4">
             <p className="text-semi-dark dark:text-white">Remember password?</p>
-            <Link to={"#"} className="text-blue">
+            <Link to={"#"} className="text-primary">
               Login now
             </Link>
           </div>

@@ -20,7 +20,7 @@ export default function SmoothTabs({
         <div className="relative shadow-tab-shadow  bg-semi_blue dark:bg-semi-dark w-full  max-w-lg rounded-lg p-2 flex items-center mb-8">
           {/* Sliding Background */}
           <div
-            className={`absolute h-[calc(100%-8px)] top-1  rounded-lg transition-all duration-300 ease-out bg-blue dark:bg-${activeButtonColor}`}
+            className={`absolute h-[calc(100%-8px)] top-1  rounded-lg transition-all duration-300 ease-out bg-primary dark:bg-${activeButtonColor}`}
             style={{
               width: `calc(${100 / tabs.length}% - 8px)`,
               left: `calc(${activeTab * (100 / tabs.length)}% + 4px)`,
@@ -33,7 +33,7 @@ export default function SmoothTabs({
               key={index}
               onClick={() => setActiveTab(index)}
               className={`relative flex-1  py-1 text-nowrap rounded-full text-md  transition-colors duration-300 ${
-                activeTab === index ? "text-white" : "text-gray dark:text-white"
+                activeTab === index ? "text-white" : "text-secondary dark:text-white"
               }`}
             >
               {tab.label}

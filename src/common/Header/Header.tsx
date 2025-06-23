@@ -31,10 +31,10 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
           onClick={toggleTheme}
           className="p-2 rounded-lg transition-colors "
         >
-          <Sun size={20} className=" text-blue" />
+          <Sun size={20} className=" text-primary" />
         </button>
         <button className="p-2 rounded-lg   transition-colors">
-          <Bell size={20} className="text-blue dark:text-white" />
+          <Bell size={20} className="text-primary dark:text-white" />
           <span className=" -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
         </button>
         <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
             <div className="text-sm font-medium text-black dark:text-white">
               Muhammad Afrasyab
             </div>
-            <div className="text-xs text-gray dark:text-white">
+            <div className="text-xs text-secondary dark:text-white">
               Premium User
             </div>
           </div>
