@@ -95,9 +95,9 @@ export const Input = forwardRef<HTMLInputElement, ReusableInputProps>(
             spellCheck="false"
             data-form-type="other"
             className={`
-  flex-1 px-4 py-3 bg-semi_blue
+  flex-1 sm:py-2 sm:px-2 md:px-4 md:py-3 bg-semi_blue
   dark:bg-semi-dark
-  text-semi-dark dark:text-white placeholder-slate-400
+  text-semi-dark dark:text-white sm:text-sm md:text-md placeholder-slate-400
   border-none outline-none
   text-base
   ${!icon ? "pl-4" : "pl-0"}

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { useSession } from "@/sessionManager/SessionContext";
+import Logo from "@/common/Logo";
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -35,11 +36,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
           <div className="w-full">
             <div className="flex flex-col md:flex-row items-center">
-              <Image
-                src={theme === "light" ? Icons?.lightLogo : Icons?.darkAuthLogo}
-                className="h-auto w-auto"
-                alt="Dark logo"
-              />
+              <Logo />
             </div>
 
             <p className="text-md text-semi-dark dark:text-white mt-4 mx-auto md:mx-0 w-[70%] text-center md:text-left ">
@@ -108,15 +105,17 @@ export const Footer: React.FC = () => {
               <span className="text-xl text-semi-dark dark:text-white font-semibold">
                 You can Find us On!
               </span>
-              <div className="flex flex-col md:flex-row items-center gap-y-2 gap-x-1 mt-4 w-full justify-center">
+              <div className="flex  items-center gap-y-2 gap-x-1 mt-4 w-full justify-center">
                 <Input
-                  onChange={handleEmailSubmit}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  inputClassName="!bg-dark w-full md:w-auto"
+                  inputClassName="!bg-dark text-white w-full md:w-auto"
                 />
                 <Button
+                  onClick={handleEmailSubmit}
                   label="Notify me"
-                  className="bg-white text-semi-dark dark:!bg-blue rounded-md px-4 py-3 max-w-[117px] dark:!text-white text-nowrap"
+                  className="bg-white text-semi-dark dark:!bg-blue rounded-md sm:py-2 sm:px-2 md:px-4 md:py-3 max-w-[117px] dark:!text-white text-nowrap"
                 />
               </div>
             </div>

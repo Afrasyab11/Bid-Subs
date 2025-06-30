@@ -1,9 +1,6 @@
 import { Icons } from "@/assets/Index";
-import Image from "@/common/image/Image";
 import MainHeading from "@/common/MainHeading";
-import { useSession } from "@/sessionManager/SessionContext";
 const HowItWorks = () => {
-  const {theme}=useSession()
   return (
     <div className="">
       <MainHeading
@@ -11,11 +8,22 @@ const HowItWorks = () => {
         subheading="Everything you need to win more jobs"
       />
       <div className="py-10 flex items-center justify-center">
-        <Image
+        {/* <Image
          src={theme === "light" ? Icons?.howWorksLight : Icons?.howItworkBg}
-          // src={Icons?.howItworkBg}
+
           alt="how it works"
-          // className="h-[600px]"
+
+        /> */}
+        <img
+          src={Icons.howWorksLight}
+          alt="how it works"
+          className="block dark:hidden h-auto w-auto"
+        />
+
+        <img
+          src={Icons.howItworkBg}
+          alt="how it works"
+          className="hidden dark:block h-auto w-auto"
         />
       </div>
     </div>

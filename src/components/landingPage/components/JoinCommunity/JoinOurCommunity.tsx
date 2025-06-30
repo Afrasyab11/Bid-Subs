@@ -8,7 +8,6 @@ export const JoinOurCommunity = () => {
 
   const handleEmailSubmit = () => {
     console.log("Email submitted:", email);
-    // Handle email submission logic here
     setEmail("");
   };
 
@@ -20,35 +19,25 @@ export const JoinOurCommunity = () => {
         className="absolute top-0 left-1/2 -translate-x-1/2 h-auto w-auto "
       />
       <div className="flex flex-col md:flex-row justify-between w-full">
-        <div className="flex flex-col justify-center items-center md:items-start">
+        <div className="flex flex-col justify-center items-center md:items-start w-full">
           <p className="sm:text-2xl md:text-4xl text-white">
             Join our Community
           </p>
           <p className="text-md text-white mt-4">
             Get instant access to weekly newsletter.
           </p>
-          {/* <div className="flex flex-col items-center md:flex-row  md:items-center gap-y-2 gap-x-1 sm:mt-4 md:mt-10">
-            <Input
-              onChange={handleEmailSubmit}
-              placeholder="Enter your email"
-              inputClassName="!bg-dark w-[360px]"
-              containerClassName="w-[360px]"
-            />
 
-            <Button
-              label="Notify me"
-              className="bg-white text-semi-dark dark:!bg-blue rounded-md px-4 py-3 min-w-[117px] dark:!text-white text-nowrap"
-            />
-          </div> */}
-          <div className="flex flex-col sm:flex-row items-center gap-y-2 gap-x-1 mt-4">
+          <div className="flex flex-col sm:flex-row items-center sm:w-full md:w-fit gap-y-2 gap-x-1 mt-4">
             <Input
-              onChange={handleEmailSubmit}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              inputClassName="!bg-dark w-full"
+              inputClassName="!bg-dark w-full text-white "
             />
             <Button
+              onClick={handleEmailSubmit}
               label="Notify me"
-              className="bg-white text-semi-dark dark:!bg-blue rounded-md px-4 py-3 max-w-[117px] dark:!text-white text-nowrap"
+              className="bg-white sm:text-sm md:text-lg text-semi-dark dark:!bg-blue rounded-md sm:py-2 px-2 md:px-4 md:py-2 sm:max-w-[80px] md:max-w-[117px] dark:!text-white text-nowrap"
             />
           </div>
         </div>
