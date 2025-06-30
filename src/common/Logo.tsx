@@ -1,4 +1,3 @@
-import Image from "./image/Image";
 import { useEffect, useState } from "react";
 import { Icons } from "@/assets/Index";
 import { useSession } from "@/sessionManager/SessionContext";
@@ -11,11 +10,19 @@ const Logo = () => {
   if (!mounted) return null;
 
   return (
-    <Image
-      src={theme === "dark" ? Icons?.darkAuthLogo : Icons?.whiteLogo}
-      alt="Logo"
-      className="h-auto w-auto"
-    />
+    <>
+      <img
+        src={Icons.whiteLogo}
+        alt="Logo"
+        className="block dark:hidden h-auto w-auto"
+      />
+
+      <img
+        src={Icons.darkAuthLogo}
+        alt="Logo"
+        className="hidden dark:block h-auto w-auto"
+      />
+    </>
   );
 };
 
