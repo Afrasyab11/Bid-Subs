@@ -27,7 +27,7 @@ export const JoinOurCommunity = () => {
             Get instant access to weekly newsletter.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center sm:w-full md:w-fit gap-y-2 gap-x-1 mt-4">
+          <div className="flex flex-col sm:flex-row items-center sm:w-full md:w-full md:max-w-sm  gap-y-2 gap-x-1 mt-4">
             <Input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -37,7 +37,7 @@ export const JoinOurCommunity = () => {
             <Button
               onClick={handleEmailSubmit}
               label="Notify me"
-              className="bg-white sm:text-sm md:text-lg text-semi-dark dark:!bg-blue rounded-md sm:py-2 px-2 md:px-4 md:py-2 sm:max-w-[80px] md:max-w-[117px] dark:!text-white text-nowrap"
+              className="bg-white sm:text-sm md:text-lg lg:text-lg text-semi-dark dark:!bg-blue rounded-md sm:py-2 px-2 md:px-4 md:py-2 sm:max-w-[80px] md:max-w-[117px] dark:!text-white text-nowrap"
             />
           </div>
         </div>
