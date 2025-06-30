@@ -115,7 +115,7 @@ export const Footer: React.FC = () => {
                 <Button
                   onClick={handleEmailSubmit}
                   label="Notify me"
-                  className="bg-white text-semi-dark dark:!bg-blue rounded-md sm:py-2 sm:px-2 md:px-4 md:py-3 max-w-[117px] dark:!text-white text-nowrap"
+                  className="bg-white sm:text-sm md:text-lg lg:text-lg text-semi-dark dark:!bg-blue rounded-md sm:py-2 px-2 md:px-4 md:py-2 sm:max-w-[80px] md:max-w-[117px] dark:!text-white text-nowrap"
                 />
               </div>
             </div>
